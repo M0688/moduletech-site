@@ -128,11 +128,52 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
 .foot .logo img{height:34px}
 
+/* ===== Vehicle strip ===== */
+.vehicle-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.vehicle-strip .wrap{display:flex;flex-wrap:wrap;gap:14px 36px;justify-content:center;padding:20px 24px}
+.vehicle-strip span{font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase;position:relative}
+.vehicle-strip span:not(:last-child)::after{content:"·";position:absolute;right:-20px;color:var(--accent);opacity:.5}
+
+/* ===== Process steps ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{padding:28px 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);position:relative}
+.step-no{font-family:'JetBrains Mono',monospace;font-size:1.6rem;color:var(--accent);opacity:.85;margin-bottom:12px}
+.step h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.92rem}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.about p{color:var(--ink);font-size:1.02rem;margin-bottom:14px}
+.about .muted-p{color:var(--muted);font-size:.96rem}
+.about-stats{display:flex;flex-direction:column;gap:16px}
+.stat{border:1px solid var(--line);border-radius:12px;padding:20px 24px;background:var(--panel);display:flex;align-items:baseline;gap:14px}
+.stat strong{font-family:'Chakra Petch',sans-serif;font-size:2rem;color:var(--accent);line-height:1}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* ===== Gallery ===== */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shot{aspect-ratio:4/3;border:1px dashed var(--line);border-radius:12px;background:var(--panel);display:flex;align-items:center;justify-content:center}
+.shot span{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);opacity:.6}
+.shot img{width:100%;height:100%;object-fit:cover;border-radius:11px}
+.gallery-note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+
+/* ===== FAQ ===== */
+.faq{max-width:780px}
+.faq details{border:1px solid var(--line);border-radius:10px;background:var(--bg);margin-bottom:12px;overflow:hidden}
+.faq summary{padding:18px 22px;font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.3rem;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+
 /* ===== Responsive ===== */
 @media(max-width:760px){
   nav.links,.nav-cta{display:none}
   .menu-btn{display:block}
   .services,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
   .hero{padding:72px 0 64px}
   section{padding:60px 0}
 }
@@ -146,7 +187,9 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     <a href="#top" class="logo"><img src="logo.jpg" alt="Module Tech UK"></a>
     <nav class="links">
       <a href="#services">Services</a>
-      <a href="#why">Why us</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
     <a href="#contact" class="nav-cta">Get a quote</a>
@@ -160,13 +203,19 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     <div class="wrap">
       <div class="eyebrow">// Vehicle module specialists · United Kingdom</div>
       <h1>Remapped. Repaired. <em>Recovered.</em></h1>
-      <p>Precision ECU remapping and module work for cars and commercial vehicles. We repair, recover and clone the electronics that keep you on the road.</p>
+      <p>Precision ECU remapping and module work for cars, vans, trucks, agricultural and plant machinery. We repair, recover and clone the electronics that keep you moving.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn btn-primary">Request a quote →</a>
         <a href="#services" class="btn btn-ghost">What we do</a>
       </div>
     </div>
   </section>
+
+  <div class="vehicle-strip">
+    <div class="wrap">
+      <span>Cars</span><span>Vans</span><span>Trucks</span><span>Agricultural</span><span>Plant &amp; machinery</span>
+    </div>
+  </div>
 
   <section id="services">
     <div class="wrap">
@@ -221,6 +270,104 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
           <h4>Cars & commercials</h4>
           <p>Remapping and module services for a wide range of vehicles across the UK.</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// How it works</div>
+        <h2>A simple process</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-no">01</div>
+          <h4>Get in touch</h4>
+          <p>Tell us your vehicle, the module and the fault or the work you want. We'll give you a price and a plan.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">02</div>
+          <h4>Send or book in</h4>
+          <p>Post the module to us, or arrange the work directly. We confirm what's needed before anything starts.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">03</div>
+          <h4>We do the work</h4>
+          <p>Remap, repair, recover or clone — carried out precisely and tested before it goes back to you.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">04</div>
+          <h4>Back on the road</h4>
+          <p>Your module returns ready to fit and run, with support if you have any questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="sec-head">
+          <div class="tag">// About us</div>
+          <h2>Module Tech UK</h2>
+        </div>
+        <p>Module Tech UK specialises in the electronics that modern vehicles depend on. From performance remapping to component-level repair, module recovery and cloning, we work across cars, vans, trucks, agricultural and plant machinery.</p>
+        <p class="muted-p">Our focus is straightforward: precise work, honest pricing and getting your vehicle running as it should — without the cost and delay of main-dealer replacement.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><strong>5</strong><span>vehicle sectors covered</span></div>
+        <div class="stat"><strong>4</strong><span>core services</span></div>
+        <div class="stat"><strong>UK</strong><span>nationwide by post</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Our work</div>
+        <h2>Recent jobs</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="shot"><span>Add photo</span></div>
+        <div class="shot"><span>Add photo</span></div>
+        <div class="shot"><span>Add photo</span></div>
+        <div class="shot"><span>Add photo</span></div>
+        <div class="shot"><span>Add photo</span></div>
+        <div class="shot"><span>Add photo</span></div>
+      </div>
+      <p class="gallery-note">Photos of completed work will appear here as jobs come in.</p>
+    </div>
+  </section>
+
+  <section id="faq" class="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Questions</div>
+        <h2>Frequently asked</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What vehicles do you work on?</summary>
+          <p>Cars, vans, trucks, agricultural machinery and plant. If you're unsure whether yours is covered, get in touch and ask.</p>
+        </details>
+        <details>
+          <summary>Do I have to bring the vehicle to you?</summary>
+          <p>In many cases you can remove and post the module to us. For some work the vehicle may need to be present — we'll tell you which applies when you enquire.</p>
+        </details>
+        <details>
+          <summary>What's the difference between repair, recovery and cloning?</summary>
+          <p>Repair fixes a faulty module. Recovery rescues data from a damaged or corrupted unit. Cloning copies your existing data onto a replacement module, avoiding dealer reprogramming.</p>
+        </details>
+        <details>
+          <summary>How much does it cost?</summary>
+          <p>It depends on the vehicle, module and work involved. Send us the details and we'll give you a clear price before anything starts.</p>
+        </details>
+        <details>
+          <summary>Is remapping safe for my vehicle?</summary>
+          <p>Our remaps are calibrated to your specific vehicle rather than generic files, with drivability and reliability in mind. We're happy to talk through what's appropriate for yours.</p>
+        </details>
       </div>
     </div>
   </section>
