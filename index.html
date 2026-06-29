@@ -259,6 +259,21 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 .shot svg{width:34px;height:34px;opacity:.5}
 .shot span{opacity:.55}
 
+/* ===== Areas we cover ===== */
+#areas{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.area-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px 28px;transition:.25s}
+.area-card:hover{border-color:var(--accent-dim);transform:translateY(-3px)}
+.area-ico{width:46px;height:46px;border-radius:11px;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:16px}
+.area-ico svg{width:24px;height:24px}
+.area-card h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.25rem;margin-bottom:10px}
+.area-card p{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+.area-tags{display:flex;flex-wrap:wrap;gap:8px}
+.area-tags span{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--accent);background:rgba(34,195,230,.08);border:1px solid var(--accent-dim);border-radius:20px;padding:4px 12px}
+.areas-note{text-align:center;color:var(--muted);font-size:.92rem;margin-top:26px}
+.areas-note a{color:var(--accent);text-decoration:underline}
+@media(max-width:760px){.areas-grid{grid-template-columns:1fr}}
+
 /* ===== Service modal ===== */
 .modal-overlay{position:fixed;inset:0;z-index:80;background:rgba(4,10,18,.78);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;animation:fadeIn .2s ease forwards}
 .modal-overlay[hidden]{display:none}
@@ -321,6 +336,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
     <nav class="links">
       <a href="#services">Services</a>
       <a href="#process">Process</a>
+      <a href="#areas">Areas</a>
       <a href="#about">About</a>
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
@@ -343,7 +359,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
           <a href="#services" class="btn btn-ghost">What we do</a>
         </div>
         <div class="price-badge"><span class="dot"></span>Remaps from <strong>£150</strong></div>
-        <div class="status-line"><span class="blip"></span>Now taking bookings · Watford &amp; UK-wide by post</div>
+        <div class="status-line"><span class="blip"></span>Mobile service across Herts · modules by post UK-wide</div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
@@ -522,6 +538,30 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
         <div class="stat"><strong>4</strong><span>core services</span></div>
         <div class="stat"><strong>UK</strong><span>nationwide by post</span></div>
       </div>
+    </div>
+  </section>
+
+  <section id="areas" class="areas">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Where we work</div>
+        <h2>Areas we cover</h2>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card">
+          <div class="area-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h4>Mobile service</h4>
+          <p>We come to you across Watford, Hertfordshire and the surrounding areas — including Luton, Hitchin, Bishop's Stortford, Harlow, Enfield and out toward the M25.</p>
+          <div class="area-tags"><span>Watford</span><span>St Albans</span><span>Hemel Hempstead</span><span>Luton</span><span>Hitchin</span><span>Harlow</span><span>Enfield</span><span>+ surrounding</span></div>
+        </div>
+        <div class="area-card">
+          <div class="area-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M2 11h20M7 7V4h10v3"/></svg></div>
+          <h4>By post — UK-wide</h4>
+          <p>Anywhere in the UK, you can remove and post your module to us for repair, recovery or cloning. We test it, sort it, and send it back ready to fit.</p>
+          <div class="area-tags"><span>Repair</span><span>Recovery</span><span>Cloning</span><span>Nationwide</span></div>
+        </div>
+      </div>
+      <p class="areas-note">Not sure if you're in range for mobile work? <a href="#contact">Drop us a message</a> and we'll let you know.</p>
     </div>
   </section>
 
@@ -722,7 +762,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 document.getElementById('yr').textContent=new Date().getFullYear();
 
 // Scroll reveal
-const revealEls=document.querySelectorAll('.sec-head, .card, .step, .stat, .shot, .faq details, .about-grid > div, .price-badge');
+const revealEls=document.querySelectorAll('.sec-head, .card, .step, .stat, .shot, .faq details, .about-grid > div, .price-badge, .area-card');
 revealEls.forEach(el=>el.classList.add('reveal'));
 if('IntersectionObserver' in window){
   const io=new IntersectionObserver((entries)=>{
