@@ -73,6 +73,9 @@ nav.links a:hover{color:var(--accent)}
 .hero h1 em{color:var(--accent);font-style:normal}
 .hero p{color:var(--muted);font-size:1.1rem;max-width:54ch;margin:24px 0 36px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.price-badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:9px 16px;border:1px solid var(--line);border-radius:30px;background:var(--panel);font-family:'JetBrains Mono',monospace;font-size:.84rem;color:var(--muted);letter-spacing:.5px}
+.price-badge strong{color:var(--accent);font-weight:600}
+.price-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(34,195,230,.18)}
 .btn{
   font-family:'Chakra Petch',sans-serif;font-weight:600;letter-spacing:.5px;font-size:.92rem;
   padding:13px 26px;border-radius:7px;transition:.2s;display:inline-flex;align-items:center;gap:9px;
@@ -236,6 +239,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
           <a href="#contact" class="btn btn-primary">Request a quote →</a>
           <a href="#services" class="btn btn-ghost">What we do</a>
         </div>
+        <div class="price-badge"><span class="dot"></span>Remaps from <strong>£150</strong></div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
@@ -385,7 +389,8 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
           <div class="tag">// About us</div>
           <h2>Module Tech UK</h2>
         </div>
-        <p>Module Tech UK specialises in the electronics that modern vehicles depend on. From performance remapping to component-level repair, module recovery and cloning, we work across cars, vans, trucks, agricultural and plant machinery.</p>
+        <p>Module Tech was founded on a simple combination that's rare in this trade: deep expertise in computing and circuit boards, paired with real hands-on garage experience. That means we don't just plug in a tool and hope — we understand the electronics at component level and the vehicles they sit in.</p>
+        <p>From performance remapping to board-level repair, module recovery and cloning, we work across cars, vans, trucks, agricultural and plant machinery. Whether it's a faulty ECU, a corrupted module or a remap for more performance and economy, the work is done with genuine technical know-how.</p>
         <p class="muted-p">Our focus is straightforward: precise work, honest pricing and getting your vehicle running as it should — without the cost and delay of main-dealer replacement.</p>
       </div>
       <div class="about-stats">
