@@ -3,9 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Module Tech UK — Remapping, Module Repair, Recovery & Cloning</title>
-<meta name="description" content="Module Tech UK — vehicle ECU remapping, module repair, recovery and cloning. Precision diagnostics and module work for cars and commercial vehicles across the UK.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<title>Module Tech UK | ECU Remapping, Module Repair & Cloning</title>
+<meta name="description" content="ECU remapping, module repair, recovery and cloning for cars, vans, trucks, agricultural and plant machinery. Serving Watford and UK-wide by post. Remaps from £150.">
+<link rel="canonical" href="https://moduletech.co.uk/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<!-- Social share preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Module Tech UK | ECU Remapping, Module Repair & Cloning">
+<meta property="og:description" content="ECU remapping, module repair, recovery and cloning for cars, vans, trucks, agricultural and plant machinery. Serving Watford and UK-wide by post.">
+<meta property="og:url" content="https://moduletech.co.uk/">
+<meta property="og:image" content="https://moduletech.co.uk/logo.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Structured data: local business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Module Tech UK",
+  "description": "ECU remapping, module repair, recovery and cloning for cars, vans, trucks, agricultural and plant machinery.",
+  "url": "https://moduletech.co.uk/",
+  "telephone": "+447534000847",
+  "email": "info@moduletech.co.uk",
+  "image": "https://moduletech.co.uk/logo.png",
+  "areaServed": "United Kingdom",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Watford",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61589894204266",
+    "https://www.instagram.com/moduletechuk"
+  ],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ECU Remapping"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Module Repair"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Module Recovery"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ECU Cloning"}}
+  ]
+}
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
@@ -117,12 +162,15 @@ section{padding:80px 0}
 form{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px}
 .field{margin-bottom:18px}
 .field label{display:block;font-size:.8rem;font-family:'JetBrains Mono',monospace;color:var(--muted);margin-bottom:7px;letter-spacing:.5px}
-.field input,.field textarea{
+.field input,.field textarea,.field select{
   width:100%;background:var(--bg);border:1px solid var(--line);border-radius:7px;
   padding:12px 14px;color:var(--ink);font-family:inherit;font-size:.95rem;transition:.2s;
 }
-.field input:focus,.field textarea:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(34,195,230,.12)}
+.field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2322c3e6' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(34,195,230,.12)}
 .field textarea{resize:vertical;min-height:110px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.field-row{grid-template-columns:1fr}}
 form .btn-primary{width:100%;justify-content:center;border:none;cursor:pointer}
 #form-status{margin-top:14px;font-size:.9rem;text-align:center;min-height:1.2em}
 
@@ -216,7 +264,9 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   .hero{padding:72px 0 64px}
   section{padding:60px 0}
 }
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
@@ -472,21 +522,45 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
       </div>
       <form id="enquiry-form" action="https://formspree.io/f/xlgynkbk" method="POST">
         <input type="hidden" name="_subject" value="New enquiry from Module Tech UK website">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
         </div>
         <div class="field">
           <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
         </div>
-        <div class="field">
-          <label for="vehicle">Vehicle & module</label>
-          <input type="text" id="vehicle" name="vehicle" placeholder="e.g. BMW 320d — ECU">
+        <div class="field-row">
+          <div class="field">
+            <label for="reg">Vehicle reg</label>
+            <input type="text" id="reg" name="reg" placeholder="e.g. LT68 BWM">
+          </div>
+          <div class="field">
+            <label for="makemodel">Make &amp; model</label>
+            <input type="text" id="makemodel" name="make_model" placeholder="e.g. BMW 320d">
+          </div>
         </div>
         <div class="field">
-          <label for="message">What do you need?</label>
-          <textarea id="message" name="message" required></textarea>
+          <label for="service">Service needed</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service…</option>
+            <option>Remapping</option>
+            <option>DPF / EGR / Adblue</option>
+            <option>Module repair</option>
+            <option>ECU cloning</option>
+            <option>Module recovery</option>
+            <option>Not sure / other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Details</label>
+          <textarea id="message" name="message" placeholder="Tell us about the fault or work you need" required></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Send enquiry →</button>
         <p id="form-status"></p>
@@ -524,6 +598,18 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 
 <script>
 document.getElementById('yr').textContent=new Date().getFullYear();
+
+// Scroll reveal
+const revealEls=document.querySelectorAll('.sec-head, .card, .step, .stat, .shot, .faq details, .about-grid > div, .price-badge');
+revealEls.forEach(el=>el.classList.add('reveal'));
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  revealEls.forEach(el=>io.observe(el));
+}else{
+  revealEls.forEach(el=>el.classList.add('in'));
+}
 
 const form=document.getElementById('enquiry-form');
 const status=document.getElementById('form-status');
