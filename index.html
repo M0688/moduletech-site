@@ -147,11 +147,14 @@ section{padding:80px 0}
 
 /* ===== Services ===== */
 .services{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
-.card{background:var(--panel);padding:34px 30px;transition:.25s;position:relative}
+.card{background:var(--panel);padding:34px 30px;transition:.25s;position:relative;display:block;width:100%;text-align:left;border:none;font-family:inherit;cursor:pointer;color:inherit}
 .card:hover{background:#131c27}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .card .idx{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);opacity:.7}
 .card h3{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.3rem;margin:14px 0 10px}
 .card p{color:var(--muted);font-size:.96rem}
+.card-more{display:inline-block;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);opacity:0;transform:translateX(-4px);transition:.25s}
+.card:hover .card-more,.card:focus-visible .card-more{opacity:1;transform:none}
 .card::after{content:"";position:absolute;left:0;top:0;width:3px;height:0;background:var(--accent);transition:.25s}
 .card:hover::after{height:100%}
 
@@ -255,6 +258,23 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 .shot{flex-direction:column;gap:10px;color:var(--accent)}
 .shot svg{width:34px;height:34px;opacity:.5}
 .shot span{opacity:.55}
+
+/* ===== Service modal ===== */
+.modal-overlay{position:fixed;inset:0;z-index:80;background:rgba(4,10,18,.78);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;animation:fadeIn .2s ease forwards}
+.modal-overlay[hidden]{display:none}
+@keyframes fadeIn{to{opacity:1}}
+.modal{position:relative;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow-y:auto;padding:38px 36px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:translateY(14px);animation:rise .25s ease forwards}
+@keyframes rise{to{transform:none}}
+.modal-close{position:absolute;top:16px;right:18px;width:38px;height:38px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--muted);font-size:1.5rem;line-height:1;cursor:pointer;transition:.2s}
+.modal-close:hover{color:var(--accent);border-color:var(--accent)}
+.modal .m-tag{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+.modal h3{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:1.8rem;margin:8px 0 14px}
+.modal .m-intro{color:var(--ink);font-size:1rem;margin-bottom:22px;line-height:1.65}
+.modal .m-point{padding:14px 0;border-top:1px solid var(--line)}
+.modal .m-point h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.02rem;margin-bottom:5px;color:var(--accent2)}
+.modal .m-point p{color:var(--muted);font-size:.93rem;line-height:1.55}
+.modal .m-footer{margin-top:22px;padding:16px 18px;background:var(--bg);border:1px solid var(--line);border-radius:10px;font-size:.92rem;color:var(--muted)}
+.modal .m-cta{display:inline-flex;margin-top:18px}
 
 /* ===== Floating contact buttons ===== */
 .float-stack{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;gap:12px}
@@ -392,26 +412,30 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
         <h2>What we do</h2>
       </div>
       <div class="services">
-        <div class="card">
+        <button class="card" data-modal="remapping" type="button">
           <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg><span class="idx">01</span></div>
           <h3>Remapping</h3>
           <p>Custom ECU tuning for performance, economy or drivability — calibrated to your vehicle, not a generic file.</p>
-        </div>
-        <div class="card">
+          <span class="card-more">Learn more →</span>
+        </button>
+        <button class="card" data-modal="repair" type="button">
           <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.2-.3-.3-2.2z"/></svg><span class="idx">02</span></div>
           <h3>Module Repair</h3>
           <p>Diagnosis and component-level repair of faulty ECUs and control modules, restored to full working order.</p>
-        </div>
-        <div class="card">
+          <span class="card-more">Learn more →</span>
+        </button>
+        <button class="card" data-modal="recovery" type="button">
           <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></svg><span class="idx">03</span></div>
           <h3>Recovery</h3>
           <p>Data recovery from damaged or corrupted modules — rescuing the information needed to get a unit running again.</p>
-        </div>
-        <div class="card">
+          <span class="card-more">Learn more →</span>
+        </button>
+        <button class="card" data-modal="cloning" type="button">
           <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg><span class="idx">04</span></div>
           <h3>Cloning</h3>
           <p>Module cloning to transfer your existing data onto a replacement unit, avoiding costly dealer reprogramming.</p>
-        </div>
+          <span class="card-more">Learn more →</span>
+        </button>
       </div>
     </div>
   </section>
@@ -626,6 +650,63 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   </div>
 </footer>
 
+<!-- Service detail modals -->
+<div class="modal-overlay" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script type="application/json" id="service-content">
+{
+  "remapping": {
+    "title": "ECU Remapping",
+    "intro": "Remapping rewrites the software map inside your vehicle's ECU to change how the engine performs. Done properly, it unlocks the potential the manufacturer left on the table — for more power, better economy, or smoother drivability.",
+    "points": [
+      ["Tuned to your vehicle", "Every map is calibrated to your exact make, model and engine — never a generic off-the-shelf file flashed blindly onto your ECU."],
+      ["Performance or economy", "Whether you want sharper throttle response and more power, or improved MPG on a daily driver or fleet, the map is built around your goal."],
+      ["Cars, vans, trucks & more", "We remap passenger cars, commercial vans, trucks, agricultural machinery and plant — each with the right approach for the job."],
+      ["Reliability first", "Gains are set within safe limits for your engine, prioritising long-term reliability over headline numbers."]
+    ],
+    "footer": "Not sure what's possible for your vehicle? Send us the details and we'll talk you through realistic gains."
+  },
+  "repair": {
+    "title": "Module Repair",
+    "intro": "When an ECU or control module fails, the dealer answer is usually a costly replacement and reprogramming. We diagnose and repair the fault at component level instead — fixing the actual problem on the board.",
+    "points": [
+      ["Component-level work", "We work down to the circuit board — tracing faults to specific components and replacing them, rather than just swapping the whole unit."],
+      ["Common faults covered", "Failed ECUs, BSI units, instrument clusters and other control modules suffering from water damage, corrosion, failed components or communication faults."],
+      ["A fraction of dealer cost", "Repairing your existing unit avoids the price of a new module plus dealer coding, and keeps your original part."],
+      ["Tested before return", "Every repaired module is tested to confirm it's fully working before it goes back to you ready to fit."]
+    ],
+    "footer": "Describe the fault and your vehicle, and we'll tell you whether a repair is the right route."
+  },
+  "recovery": {
+    "title": "Module Recovery",
+    "intro": "Sometimes a module isn't just faulty — its data is damaged or corrupted, which can leave the unit unusable. Recovery rescues that critical information so the module can run again.",
+    "points": [
+      ["Data rescue", "We recover the software and stored data from modules that have become corrupted through failed updates, power faults or hardware damage."],
+      ["Avoid a full replacement", "Recovering the original data can save a module that would otherwise be scrap, avoiding a costly new unit and reprogramming."],
+      ["Pre-repair diagnosis", "Recovery often goes hand-in-hand with repair — we assess what's salvageable and the best way to get you running again."],
+      ["Honest assessment", "If a unit genuinely can't be recovered, we'll tell you straight and talk through the alternatives."]
+    ],
+    "footer": "Got a module that's stopped responding or won't accept programming? Get in touch and we'll take a look."
+  },
+  "cloning": {
+    "title": "ECU Cloning",
+    "intro": "Cloning copies all the data from your original ECU or module onto a replacement unit. The replacement then behaves exactly like your original — no dealer reprogramming or fresh coding required.",
+    "points": [
+      ["Plug-and-play replacement", "We transfer your existing data onto a donor unit so it works straight away in your vehicle, as if it were the original."],
+      ["Skip dealer reprogramming", "Cloning avoids the cost and hassle of main-dealer coding, immobiliser matching and security syncing on a brand-new module."],
+      ["Ideal for failed hardware", "When a module's hardware has failed but its data is intact, cloning onto a working unit is often the quickest, cheapest fix."],
+      ["Keyless to your vehicle", "The cloned unit retains your original immobiliser and security data, so your existing keys keep working."]
+    ],
+    "footer": "Replacing a failed module? Ask us whether cloning is the right approach for your vehicle."
+  }
+}
+</script>
+
 <div class="float-stack">
   <a href="tel:+447534000847" class="call-float" aria-label="Call us">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg>
@@ -651,6 +732,38 @@ if('IntersectionObserver' in window){
 }else{
   revealEls.forEach(el=>el.classList.add('in'));
 }
+
+// Service modals
+const svcData=JSON.parse(document.getElementById('service-content').textContent);
+const overlay=document.getElementById('modal');
+const mbody=document.getElementById('modal-body');
+const mclose=document.getElementById('modal-close');
+let lastFocused=null;
+
+function openModal(key){
+  const d=svcData[key]; if(!d) return;
+  let html='<div class="m-tag">// Service</div><h3 id="modal-title">'+d.title+'</h3>';
+  html+='<p class="m-intro">'+d.intro+'</p>';
+  d.points.forEach(p=>{ html+='<div class="m-point"><h4>'+p[0]+'</h4><p>'+p[1]+'</p></div>'; });
+  html+='<div class="m-footer">'+d.footer+'</div>';
+  html+='<a href="#contact" class="btn btn-primary m-cta" data-close>Request a quote →</a>';
+  mbody.innerHTML=html;
+  lastFocused=document.activeElement;
+  overlay.hidden=false;
+  document.body.style.overflow='hidden';
+  mclose.focus();
+}
+function closeModal(){
+  overlay.hidden=true;
+  document.body.style.overflow='';
+  if(lastFocused) lastFocused.focus();
+}
+document.querySelectorAll('.card[data-modal]').forEach(c=>{
+  c.addEventListener('click',()=>openModal(c.getAttribute('data-modal')));
+});
+mclose.addEventListener('click',closeModal);
+overlay.addEventListener('click',e=>{ if(e.target===overlay||e.target.hasAttribute('data-close')) closeModal(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!overlay.hidden) closeModal(); });
 
 const form=document.getElementById('enquiry-form');
 const status=document.getElementById('form-status');
