@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECU Remapping & Module Repair in Hemel Hempstead | Module Tech UK</title>
+<meta name="description" content="Mobile ECU remapping, module repair, recovery and cloning in Hemel Hempstead. Cars, vans, trucks, agricultural and plant. Remaps from £150.">
+<link rel="canonical" href="https://moduletech.co.uk/remapping-hemel-hempstead.html">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ECU Remapping & Module Repair in Hemel Hempstead | Module Tech UK">
+<meta property="og:description" content="Mobile ECU remapping, module repair, recovery and cloning in Hemel Hempstead. Cars, vans, trucks, agricultural and plant. Remaps from £150.">
+<meta property="og:url" content="https://moduletech.co.uk/remapping-hemel-hempstead.html">
+<meta property="og:image" content="https://moduletech.co.uk/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1420;
+  --bg2:#070f18;
+  --panel:#0f1c2c;
+  --panel2:#102536;
+  --line:#1c2e42;
+  --ink:#e8eef6;
+  --muted:#8597ad;
+  --accent:#22c3e6;
+  --accent2:#3df0ff;
+  --accent-dim:#14627a;
+  --navy:#16385f;
+  --grid:#11212f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+
+/* ===== Header ===== */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,14,20,.82);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center}
+.logo img{height:54px;width:auto}
+nav.links{display:flex;gap:28px;font-size:.9rem;color:var(--muted)}
+nav.links a:hover{color:var(--accent)}
+.nav-cta{
+  font-family:'Chakra Petch',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.5px;
+  border:1px solid var(--accent-dim);color:var(--accent);
+  padding:8px 16px;border-radius:6px;transition:.2s;
+}
+.nav-cta:hover{background:var(--accent);color:#06243a}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:8px 12px;border-radius:6px;font-size:.85rem}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;padding:104px 0 92px;overflow:hidden;
+  background:
+    radial-gradient(900px 500px at 78% 38%, rgba(34,195,230,.10), transparent 60%),
+    radial-gradient(600px 400px at 12% 10%, rgba(34,195,230,.06), transparent 55%),
+    linear-gradient(180deg,transparent,var(--bg) 92%),
+    repeating-linear-gradient(0deg,transparent 0 39px,var(--grid) 39px 40px),
+    repeating-linear-gradient(90deg,transparent 0 39px,var(--grid) 39px 40px);
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:2px;
+  color:var(--accent);text-transform:uppercase;margin-bottom:20px;
+}
+.hero h1{
+  font-family:'Chakra Petch',sans-serif;font-weight:700;
+  font-size:clamp(2.3rem,6vw,4.1rem);line-height:1.05;letter-spacing:-.5px;
+  max-width:14ch;
+}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:54ch;margin:24px 0 36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.price-badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:9px 16px;border:1px solid var(--line);border-radius:30px;background:var(--panel);font-family:'JetBrains Mono',monospace;font-size:.84rem;color:var(--muted);letter-spacing:.5px}
+.price-badge strong{color:var(--accent);font-weight:600}
+.price-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(34,195,230,.18)}
+.btn{
+  font-family:'Chakra Petch',sans-serif;font-weight:600;letter-spacing:.5px;font-size:.92rem;
+  padding:13px 26px;border-radius:7px;transition:.2s;display:inline-flex;align-items:center;gap:9px;
+}
+.btn-primary{background:var(--accent);color:#06243a}
+.btn-primary:hover{box-shadow:0 0 0 3px rgba(34,195,230,.25);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== Section base ===== */
+section{padding:80px 0}
+#process{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#gallery{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#about{background:linear-gradient(180deg,var(--bg),#0c1a2a)}
+#contact{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.sec-head{margin-bottom:48px}
+.sec-head .tag{font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+.sec-head h2{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(1.7rem,4vw,2.5rem);margin-top:10px;letter-spacing:-.3px}
+
+/* ===== Services ===== */
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card{background:var(--panel);padding:34px 30px;transition:.25s;position:relative;display:block;width:100%;text-align:left;border:none;font-family:inherit;cursor:pointer;color:inherit}
+.card:hover{background:#131c27}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.card .idx{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);opacity:.7}
+.card h3{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.3rem;margin:14px 0 10px}
+.card p{color:var(--muted);font-size:.96rem}
+.card-more{display:inline-block;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);opacity:0;transform:translateX(-4px);transition:.25s}
+.card:hover .card-more,.card:focus-visible .card-more{opacity:1;transform:none}
+.card::after{content:"";position:absolute;left:0;top:0;width:3px;height:0;background:var(--accent);transition:.25s}
+.card:hover::after{height:100%}
+
+/* ===== Why ===== */
+.why{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.why-item .ico{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:.9rem;margin-bottom:12px}
+.why-item h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px}
+.why-item p{color:var(--muted);font-size:.94rem}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-copy h2{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.3px;line-height:1.1}
+.contact-copy p{color:var(--muted);margin-top:18px;max-width:42ch}
+.contact-detail{margin-top:28px;font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--ink)}
+.contact-detail span{color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.8rem;font-family:'JetBrains Mono',monospace;color:var(--muted);margin-bottom:7px;letter-spacing:.5px}
+.field input,.field textarea,.field select{
+  width:100%;background:var(--bg);border:1px solid var(--line);border-radius:7px;
+  padding:12px 14px;color:var(--ink);font-family:inherit;font-size:.95rem;transition:.2s;
+}
+.field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2322c3e6' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(34,195,230,.12)}
+.field textarea{resize:vertical;min-height:110px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.field-row{grid-template-columns:1fr}}
+form .btn-primary{width:100%;justify-content:center;border:none;cursor:pointer}
+#form-status{margin-top:14px;font-size:.9rem;text-align:center;min-height:1.2em}
+
+/* ===== Footer ===== */
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.85rem}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.socials{display:flex;gap:14px}
+.socials a{width:36px;height:36px;border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:.2s}
+.socials a svg{width:18px;height:18px}
+.socials a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.foot .logo img{height:46px}
+
+/* ===== Vehicle strip ===== */
+.vehicle-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.vehicle-strip .wrap{display:flex;flex-wrap:wrap;gap:14px 36px;justify-content:center;padding:20px 24px}
+.vehicle-strip span{font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase;position:relative}
+.vehicle-strip span:not(:last-child)::after{content:"·";position:absolute;right:-20px;color:var(--accent);opacity:.5}
+
+/* ===== Process steps ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{padding:28px 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);position:relative}
+.step-no{font-family:'JetBrains Mono',monospace;font-size:1.6rem;color:var(--accent);opacity:.85;margin-bottom:12px}
+.step h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.92rem}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.about p{color:var(--ink);font-size:1.02rem;margin-bottom:14px}
+.about .muted-p{color:var(--muted);font-size:.96rem}
+.about-stats{display:flex;flex-direction:column;gap:16px}
+.stat{border:1px solid var(--line);border-radius:12px;padding:20px 24px;background:var(--panel);display:flex;align-items:baseline;gap:14px}
+.stat strong{font-family:'Chakra Petch',sans-serif;font-size:2rem;color:var(--accent);line-height:1}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* ===== Gallery ===== */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shot{aspect-ratio:4/3;border:1px dashed var(--line);border-radius:12px;background:var(--panel);display:flex;align-items:center;justify-content:center}
+.shot span{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);opacity:.6}
+.shot img{width:100%;height:100%;object-fit:cover;border-radius:11px}
+.gallery-note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+
+/* ===== FAQ ===== */
+.faq{max-width:780px}
+.faq details{border:1px solid var(--line);border-radius:10px;background:var(--bg);margin-bottom:12px;overflow:hidden}
+.faq summary{padding:18px 22px;font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.3rem;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+
+/* ===== Hero layout & art ===== */
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-art{display:flex;justify-content:center;align-items:center}
+.hero-art svg{width:100%;max-width:440px;height:auto;filter:drop-shadow(0 0 36px rgba(34,195,230,.22))}
+.scanline{animation:scan 3s ease-in-out infinite}
+@keyframes scan{0%{transform:translateY(0)}50%{transform:translateY(127px)}100%{transform:translateY(0)}}
+.diag-ring{transform-origin:180px 180px;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.status-line{display:inline-flex;align-items:center;gap:9px;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);letter-spacing:.3px}
+.status-line .blip{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:blip 1.8s ease-out infinite}
+@keyframes blip{0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)}70%{box-shadow:0 0 0 8px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.pulse.p2{animation-delay:.8s}
+.pulse.p3{animation-delay:1.6s}
+@keyframes pulse{0%,100%{opacity:.2;r:3}50%{opacity:1;r:5}}
+
+/* ===== Service icons ===== */
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.svc-ico{width:30px;height:30px;color:var(--accent)}
+.card:hover .svc-ico{color:#5fe0ff}
+
+/* ===== Gallery polish ===== */
+.shot{flex-direction:column;gap:10px;color:var(--accent)}
+.shot svg{width:34px;height:34px;opacity:.5}
+.shot span{opacity:.55}
+
+/* ===== Areas we cover ===== */
+#areas{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.area-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px 28px;transition:.25s}
+.area-card:hover{border-color:var(--accent-dim);transform:translateY(-3px)}
+.area-ico{width:46px;height:46px;border-radius:11px;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:16px}
+.area-ico svg{width:24px;height:24px}
+.area-card h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.25rem;margin-bottom:10px}
+.area-card p{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+.area-tags{display:flex;flex-wrap:wrap;gap:8px}
+.area-tags span{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--accent);background:rgba(34,195,230,.08);border:1px solid var(--accent-dim);border-radius:20px;padding:4px 12px}
+.areas-note{text-align:center;color:var(--muted);font-size:.92rem;margin-top:26px}
+.areas-note a{color:var(--accent);text-decoration:underline}
+@media(max-width:760px){.areas-grid{grid-template-columns:1fr}}
+
+/* ===== Service modal ===== */
+.modal-overlay{position:fixed;inset:0;z-index:80;background:rgba(4,10,18,.78);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;animation:fadeIn .2s ease forwards}
+.modal-overlay[hidden]{display:none}
+@keyframes fadeIn{to{opacity:1}}
+.modal{position:relative;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow-y:auto;padding:38px 36px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:translateY(14px);animation:rise .25s ease forwards}
+@keyframes rise{to{transform:none}}
+.modal-close{position:absolute;top:16px;right:18px;width:38px;height:38px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--muted);font-size:1.5rem;line-height:1;cursor:pointer;transition:.2s}
+.modal-close:hover{color:var(--accent);border-color:var(--accent)}
+.modal .m-tag{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+.modal h3{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:1.8rem;margin:8px 0 14px}
+.modal .m-intro{color:var(--ink);font-size:1rem;margin-bottom:22px;line-height:1.65}
+.modal .m-point{padding:14px 0;border-top:1px solid var(--line)}
+.modal .m-point h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.02rem;margin-bottom:5px;color:var(--accent2)}
+.modal .m-point p{color:var(--muted);font-size:.93rem;line-height:1.55}
+.modal .m-footer{margin-top:22px;padding:16px 18px;background:var(--bg);border:1px solid var(--line);border-radius:10px;font-size:.92rem;color:var(--muted)}
+.modal .m-cta{display:inline-flex;margin-top:18px}
+
+/* ===== Floating contact buttons ===== */
+.float-stack{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;gap:12px}
+.wa-float,.call-float{width:58px;height:58px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.35);transition:transform .2s,box-shadow .2s}
+.wa-float{background:#25D366}
+.wa-float svg{width:30px;height:30px}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(37,211,102,.45)}
+.call-float{background:var(--accent);color:#06243a}
+.call-float svg{width:28px;height:28px}
+.call-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(34,195,230,.45)}
+@media(max-width:760px){.float-stack{right:16px;bottom:16px;gap:10px}.wa-float,.call-float{width:52px;height:52px}.wa-float svg{width:27px;height:27px}.call-float svg{width:25px;height:25px}}
+
+/* ===== Stat band ===== */
+.statband{padding:64px 0;background:linear-gradient(120deg,#0c2438,#0a1a2b 60%,#0c2438);border-top:1px solid var(--accent-dim);border-bottom:1px solid var(--accent-dim);position:relative;overflow:hidden}
+.statband::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 200px at 50% 0%,rgba(34,195,230,.12),transparent 70%)}
+.statband-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.bigstat strong{display:block;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;background:linear-gradient(180deg,#eafaff,#22c3e6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.bigstat span{display:block;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase;line-height:1.5}
+@media(max-width:680px){.statband-grid{grid-template-columns:1fr 1fr;gap:34px 20px}}
+
+/* ===== Responsive ===== */
+@media(max-width:760px){
+  nav.links,.nav-cta{display:none}
+  .menu-btn{display:block}
+  .services,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr;gap:8px}
+  .hero-art{display:none}
+  .steps{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .hero{padding:72px 0 64px}
+  section{padding:60px 0}
+}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Module Tech UK",
+  "description": "ECU remapping, module repair, recovery and cloning in Hemel Hempstead.",
+  "url": "https://moduletech.co.uk/remapping-hemel-hempstead.html",
+  "telephone": "+447534000847",
+  "email": "info@moduletech.co.uk",
+  "image": "https://moduletech.co.uk/logo.png",
+  "areaServed": {"@type": "City", "name": "Hemel Hempstead"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Watford", "addressCountry": "GB"}
+}
+</script>
+</head>
+<body>
+<header>
+  <div class="wrap bar">
+    <a href="index.html" class="logo"><img src="logo.png" alt="Module Tech UK"></a>
+    <nav class="links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#areas">Areas</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <a href="index.html#contact" class="nav-cta">Get a quote</a>
+    <button class="menu-btn" onclick="document.querySelector('.links').style.display='flex';this.remove()">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">// Hemel Hempstead · Vehicle module specialists</div>
+      <h1 style="max-width:18ch">Vehicle Remapping & Module Repair in Hemel Hempstead</h1>
+      <p>Serving Hemel Hempstead and the surrounding area, Module Tech UK offers custom ECU remapping alongside component-level module repair, recovery and cloning. We're a short trip away in Watford, and Hemel is a regular part of our mobile coverage.</p>
+      <div class="hero-cta">
+        <a href="index.html#contact" class="btn btn-primary">Request a quote →</a>
+        <a href="index.html#services" class="btn btn-ghost">What we do</a>
+      </div>
+      <div class="price-badge"><span class="dot"></span>Remaps from <strong>£150</strong></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <p style="max-width:64ch;color:var(--muted);font-size:1.02rem;line-height:1.7">Every remap is calibrated to your exact vehicle rather than a generic file, with reliability kept front of mind. And because we work at board level, we can often repair a faulty module rather than replacing it — saving you the cost of a new unit and dealer programming.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Services in Hemel Hempstead</div>
+        <h2>What we do</h2>
+      </div>
+      
+      <div class="services">
+        <a class="card" href="index.html#services">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg><span class="idx">01</span></div>
+          <h3>Remapping</h3>
+          <p>Custom ECU tuning for performance, economy or drivability — calibrated to your vehicle, not a generic file.</p>
+        </a>
+        <a class="card" href="index.html#services">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.2-.3-.3-2.2z"/></svg><span class="idx">02</span></div>
+          <h3>Module Repair</h3>
+          <p>Diagnosis and component-level repair of faulty ECUs and control modules, restored to full working order.</p>
+        </a>
+        <a class="card" href="index.html#services">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></svg><span class="idx">03</span></div>
+          <h3>Recovery</h3>
+          <p>Data recovery from damaged or corrupted modules — rescuing the information needed to get a unit running again.</p>
+        </a>
+        <a class="card" href="index.html#services">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg><span class="idx">04</span></div>
+          <h3>Cloning</h3>
+          <p>Module cloning to transfer your existing data onto a replacement unit, avoiding costly dealer reprogramming.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="why">
+    <div class="wrap" style="text-align:center">
+      <h2 style="font-family:'Chakra Petch',sans-serif;font-size:clamp(1.6rem,4vw,2.3rem);margin-bottom:14px">Get a quote for Hemel Hempstead</h2>
+      <p style="color:var(--muted);max-width:52ch;margin:0 auto 26px">Hemel Hempstead driver after a remap or module fix? Get a clear quote with no obligation.</p>
+      <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="index.html#contact" class="btn btn-primary">Request a quote →</a>
+        <a href="tel:+447534000847" class="btn btn-ghost">Call 07534 000847</a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap foot">
+    <a href="index.html" class="logo"><img src="logo.png" alt="Module Tech UK"></a>
+    <div class="foot-mid">© <span id="yr"></span> Module Tech UK · Remapping · Repair · Recovery · Cloning</div>
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=61589894204266" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12c0-6.6-5.4-12-12-12S0 5.4 0 12c0 6 4.4 11 10.1 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-1.9.9-1.9 1.8V12h3.3l-.5 3.5h-2.8v8.4C19.6 23 24 18 24 12z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/moduletechuk" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.6c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 2.7a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm0 9.1a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2zm5.7-9.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/447534000847" class="wa-float" target="_blank" rel="noopener" aria-label="Message us on WhatsApp" style="position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.35)">
+  <svg viewBox="0 0 32 32" fill="currentColor" width="30" height="30"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.8 5.5 2.2 7.9L.5 31.5l7.8-2.1c2.3 1.3 4.9 1.9 7.7 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.3c-2.5 0-4.9-.7-7-1.9l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3C2.6 8.6 8.6 2.6 16 2.6S29.4 8.6 29.4 16 23.4 28.8 16 28.8z"/></svg>
+</a>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
