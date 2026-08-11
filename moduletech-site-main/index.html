@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module Tech UK | ECU Remapping, Module Repair & Cloning</title>
+<meta name="description" content="ECU remapping, module repair, recovery and cloning for cars, vans, trucks, agricultural and plant machinery. Serving Watford and UK-wide by post. Remaps from £200.">
+<link rel="canonical" href="https://moduletech.co.uk/">
+
+<!-- Favicon -->
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
+
+<!-- Social share preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Module Tech UK | ECU Remapping, Module Repair & Cloning">
+<meta property="og:description" content="ECU remapping, module repair, recovery and cloning for cars, vans, trucks, agricultural and plant machinery. Serving Watford and UK-wide by post.">
+<meta property="og:url" content="https://moduletech.co.uk/">
+<meta property="og:image" content="https://moduletech.co.uk/logo.png">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Structured data: local business -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  "name": "Module Tech UK",
+  "description": "ECU remapping, module repair, recovery and cloning for cars, vans, trucks, agricultural and plant machinery.",
+  "url": "https://moduletech.co.uk/",
+  "telephone": "+447534000847",
+  "email": "info@moduletech.co.uk",
+  "image": "https://moduletech.co.uk/logo.png",
+  "areaServed": "United Kingdom",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Watford",
+    "addressCountry": "GB"
+  },
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61589894204266",
+    "https://www.instagram.com/moduletechuk"
+  ],
+  "makesOffer": [
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ECU Remapping"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Module Repair"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Module Recovery"}},
+    {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "ECU Cloning"}}
+  ]
+}
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a1420;
+  --bg2:#070f18;
+  --panel:#0f1c2c;
+  --panel2:#102536;
+  --line:#1c2e42;
+  --ink:#e8eef6;
+  --muted:#8597ad;
+  --accent:#22c3e6;
+  --accent2:#3df0ff;
+  --accent-dim:#14627a;
+  --navy:#16385f;
+  --grid:#11212f;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:'Inter',system-ui,sans-serif;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+a{color:inherit;text-decoration:none}
+
+/* ===== Header ===== */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(10,14,20,.82);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center}
+.logo img{height:54px;width:auto}
+nav.links{display:flex;gap:28px;font-size:.9rem;color:var(--muted)}
+nav.links a:hover{color:var(--accent)}
+.nav-cta{
+  font-family:'Chakra Petch',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.5px;
+  border:1px solid var(--accent-dim);color:var(--accent);
+  padding:8px 16px;border-radius:6px;transition:.2s;
+}
+.nav-cta:hover{background:var(--accent);color:#06243a}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:8px 12px;border-radius:6px;font-size:.85rem}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;padding:104px 0 92px;overflow:hidden;
+  background:
+    radial-gradient(900px 500px at 78% 38%, rgba(34,195,230,.10), transparent 60%),
+    radial-gradient(600px 400px at 12% 10%, rgba(34,195,230,.06), transparent 55%),
+    linear-gradient(180deg,transparent,var(--bg) 92%),
+    repeating-linear-gradient(0deg,transparent 0 39px,var(--grid) 39px 40px),
+    repeating-linear-gradient(90deg,transparent 0 39px,var(--grid) 39px 40px);
+}
+.eyebrow{
+  font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:2px;
+  color:var(--accent);text-transform:uppercase;margin-bottom:20px;
+}
+.hero h1{
+  font-family:'Chakra Petch',sans-serif;font-weight:700;
+  font-size:clamp(2.3rem,6vw,4.1rem);line-height:1.05;letter-spacing:-.5px;
+  max-width:14ch;
+}
+.hero h1 em{color:var(--accent);font-style:normal}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:54ch;margin:24px 0 36px}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.price-badge{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:9px 16px;border:1px solid var(--line);border-radius:30px;background:var(--panel);font-family:'JetBrains Mono',monospace;font-size:.84rem;color:var(--muted);letter-spacing:.5px}
+.price-badge strong{color:var(--accent);font-weight:600}
+.price-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(34,195,230,.18)}
+.btn{
+  font-family:'Chakra Petch',sans-serif;font-weight:600;letter-spacing:.5px;font-size:.92rem;
+  padding:13px 26px;border-radius:7px;transition:.2s;display:inline-flex;align-items:center;gap:9px;
+}
+.btn-primary{background:var(--accent);color:#06243a}
+.btn-primary:hover{box-shadow:0 0 0 3px rgba(34,195,230,.25);transform:translateY(-1px)}
+.btn-ghost{border:1px solid var(--line);color:var(--ink)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ===== Section base ===== */
+section{padding:80px 0}
+#process{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#gallery{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#about{background:linear-gradient(180deg,var(--bg),#0c1a2a)}
+#contact{background:linear-gradient(180deg,var(--bg2),var(--bg))}
+.sec-head{margin-bottom:48px}
+.sec-head .tag{font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+.sec-head h2{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(1.7rem,4vw,2.5rem);margin-top:10px;letter-spacing:-.3px}
+
+/* ===== Services ===== */
+.services{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card{background:var(--panel);padding:34px 30px;transition:.25s;position:relative;display:block;width:100%;text-align:left;border:none;font-family:inherit;cursor:pointer;color:inherit}
+.card:hover{background:#131c27}
+.card:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+.card .idx{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);opacity:.7}
+.card h3{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.3rem;margin:14px 0 10px}
+.card p{color:var(--muted);font-size:.96rem}
+.card-more{display:inline-block;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--accent);opacity:0;transform:translateX(-4px);transition:.25s}
+.card:hover .card-more,.card:focus-visible .card-more{opacity:1;transform:none}
+.card::after{content:"";position:absolute;left:0;top:0;width:3px;height:0;background:var(--accent);transition:.25s}
+.card:hover::after{height:100%}
+
+/* ===== Why ===== */
+.why{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.why-item .ico{font-family:'JetBrains Mono',monospace;color:var(--accent);font-size:.9rem;margin-bottom:12px}
+.why-item h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px}
+.why-item p{color:var(--muted);font-size:.94rem}
+
+/* ===== Contact ===== */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.contact-copy h2{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(1.8rem,4vw,2.6rem);letter-spacing:-.3px;line-height:1.1}
+.contact-copy p{color:var(--muted);margin-top:18px;max-width:42ch}
+.contact-detail{margin-top:28px;font-family:'JetBrains Mono',monospace;font-size:.9rem;color:var(--ink)}
+.contact-detail span{color:var(--muted)}
+form{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:30px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.8rem;font-family:'JetBrains Mono',monospace;color:var(--muted);margin-bottom:7px;letter-spacing:.5px}
+.field input,.field textarea,.field select{
+  width:100%;background:var(--bg);border:1px solid var(--line);border-radius:7px;
+  padding:12px 14px;color:var(--ink);font-family:inherit;font-size:.95rem;transition:.2s;
+}
+.field select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2322c3e6' stroke-width='2'><path d='M6 9l6 6 6-6'/></svg>");background-repeat:no-repeat;background-position:right 14px center;padding-right:38px}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(34,195,230,.12)}
+.field textarea{resize:vertical;min-height:110px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.field-row{grid-template-columns:1fr}}
+form .btn-primary{width:100%;justify-content:center;border:none;cursor:pointer}
+#form-status{margin-top:14px;font-size:.9rem;text-align:center;min-height:1.2em}
+.form-note{font-size:.82rem;color:var(--muted);text-align:center;line-height:1.5}
+.form-note a{color:var(--accent);border-bottom:1px solid var(--accent-dim);transition:.2s}
+.form-note a:hover{border-color:var(--accent)}
+
+/* ===== Footer ===== */
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.85rem}
+.foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.foot-mid{text-align:center}
+.foot-legal{display:block;margin-top:6px}
+.foot-legal a{color:var(--muted);border-bottom:1px solid var(--line);transition:.2s}
+.foot-legal a:hover{color:var(--accent);border-color:var(--accent)}
+.socials{display:flex;gap:14px}
+.socials a{width:36px;height:36px;border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:.2s}
+.socials a svg{width:18px;height:18px}
+.socials a:hover{color:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.foot .logo img{height:46px}
+
+/* ===== Vehicle strip ===== */
+.vehicle-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.vehicle-strip .wrap{display:flex;flex-wrap:wrap;gap:14px 36px;justify-content:center;padding:20px 24px}
+.vehicle-strip span{font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase;position:relative}
+.vehicle-strip span:not(:last-child)::after{content:"·";position:absolute;right:-20px;color:var(--accent);opacity:.5}
+
+/* ===== Process steps ===== */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.step{padding:28px 22px;border:1px solid var(--line);border-radius:12px;background:var(--panel);position:relative}
+.step-no{font-family:'JetBrains Mono',monospace;font-size:1.6rem;color:var(--accent);opacity:.85;margin-bottom:12px}
+.step h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.1rem;margin-bottom:8px}
+.step p{color:var(--muted);font-size:.92rem}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.about p{color:var(--ink);font-size:1.02rem;margin-bottom:14px}
+.about .muted-p{color:var(--muted);font-size:.96rem}
+.about-stats{display:flex;flex-direction:column;gap:16px}
+.stat{border:1px solid var(--line);border-radius:12px;padding:20px 24px;background:var(--panel);display:flex;align-items:baseline;gap:14px}
+.stat strong{font-family:'Chakra Petch',sans-serif;font-size:2rem;color:var(--accent);line-height:1}
+.stat span{color:var(--muted);font-size:.9rem}
+
+/* ===== Gallery ===== */
+.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.shot{aspect-ratio:4/3;border:1px dashed var(--line);border-radius:12px;background:var(--panel);display:flex;align-items:center;justify-content:center}
+.shot span{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);opacity:.6}
+.shot img{width:100%;height:100%;object-fit:cover;border-radius:11px}
+.gallery-note{text-align:center;color:var(--muted);font-size:.88rem;margin-top:24px}
+
+/* ===== FAQ ===== */
+.faq{max-width:780px}
+.faq details{border:1px solid var(--line);border-radius:10px;background:var(--bg);margin-bottom:12px;overflow:hidden}
+.faq summary{padding:18px 22px;font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--accent);font-size:1.3rem;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 22px 20px;color:var(--muted);font-size:.95rem}
+
+/* ===== Hero layout & art ===== */
+.hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-art{display:flex;justify-content:center;align-items:center}
+.hero-art svg{width:100%;max-width:440px;height:auto;filter:drop-shadow(0 0 36px rgba(34,195,230,.22))}
+.scanline{animation:scan 3s ease-in-out infinite}
+@keyframes scan{0%{transform:translateY(0)}50%{transform:translateY(127px)}100%{transform:translateY(0)}}
+.diag-ring{transform-origin:180px 180px;animation:spin 30s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.status-line{display:inline-flex;align-items:center;gap:9px;margin-top:16px;font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);letter-spacing:.3px}
+.status-line .blip{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.6);animation:blip 1.8s ease-out infinite}
+@keyframes blip{0%{box-shadow:0 0 0 0 rgba(52,211,153,.5)}70%{box-shadow:0 0 0 8px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+.pulse.p2{animation-delay:.8s}
+.pulse.p3{animation-delay:1.6s}
+@keyframes pulse{0%,100%{opacity:.2;r:3}50%{opacity:1;r:5}}
+
+/* ===== Service icons ===== */
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.svc-ico{width:30px;height:30px;color:var(--accent)}
+.card:hover .svc-ico{color:#5fe0ff}
+
+/* ===== Gallery polish ===== */
+.shot{flex-direction:column;gap:10px;color:var(--accent)}
+.shot svg{width:34px;height:34px;opacity:.5}
+.shot span{opacity:.55}
+
+/* ===== Areas we cover ===== */
+#areas{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.areas-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.area-card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:30px 28px;transition:.25s}
+.area-card:hover{border-color:var(--accent-dim);transform:translateY(-3px)}
+.area-ico{width:46px;height:46px;border-radius:11px;background:var(--bg);border:1px solid var(--line);display:flex;align-items:center;justify-content:center;color:var(--accent);margin-bottom:16px}
+.area-ico svg{width:24px;height:24px}
+.area-card h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.25rem;margin-bottom:10px}
+.area-card p{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+.area-tags{display:flex;flex-wrap:wrap;gap:8px}
+.area-tags span{font-family:'JetBrains Mono',monospace;font-size:.74rem;color:var(--accent);background:rgba(34,195,230,.08);border:1px solid var(--accent-dim);border-radius:20px;padding:4px 12px}
+.areas-note{text-align:center;color:var(--muted);font-size:.92rem;margin-top:26px}
+.town-links{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px;margin-top:30px;padding-top:26px;border-top:1px solid var(--line)}
+.town-links span{font-family:'JetBrains Mono',monospace;font-size:.8rem;color:var(--muted);letter-spacing:.5px}
+.town-links a{font-size:.88rem;color:var(--accent);border:1px solid var(--accent-dim);border-radius:20px;padding:5px 14px;transition:.2s}
+.town-links a:hover{background:var(--accent);color:#06243a}
+.areas-note a{color:var(--accent);text-decoration:underline}
+@media(max-width:760px){.areas-grid{grid-template-columns:1fr}}
+
+/* ===== Service modal ===== */
+.modal-overlay{position:fixed;inset:0;z-index:80;background:rgba(4,10,18,.78);backdrop-filter:blur(4px);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;animation:fadeIn .2s ease forwards}
+.modal-overlay[hidden]{display:none}
+@keyframes fadeIn{to{opacity:1}}
+.modal{position:relative;background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);border-radius:16px;max-width:560px;width:100%;max-height:88vh;overflow-y:auto;padding:38px 36px;box-shadow:0 30px 80px rgba(0,0,0,.5);transform:translateY(14px);animation:rise .25s ease forwards}
+@keyframes rise{to{transform:none}}
+.modal-close{position:absolute;top:16px;right:18px;width:38px;height:38px;border-radius:9px;border:1px solid var(--line);background:var(--bg);color:var(--muted);font-size:1.5rem;line-height:1;cursor:pointer;transition:.2s}
+.modal-close:hover{color:var(--accent);border-color:var(--accent)}
+.modal .m-tag{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:2px;color:var(--accent);text-transform:uppercase}
+.modal h3{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:1.8rem;margin:8px 0 14px}
+.modal .m-intro{color:var(--ink);font-size:1rem;margin-bottom:22px;line-height:1.65}
+.modal .m-point{padding:14px 0;border-top:1px solid var(--line)}
+.modal .m-point h4{font-family:'Chakra Petch',sans-serif;font-weight:600;font-size:1.02rem;margin-bottom:5px;color:var(--accent2)}
+.modal .m-point p{color:var(--muted);font-size:.93rem;line-height:1.55}
+.modal .m-footer{margin-top:22px;padding:16px 18px;background:var(--bg);border:1px solid var(--line);border-radius:10px;font-size:.92rem;color:var(--muted)}
+.modal .m-cta{display:inline-flex;margin-top:18px}
+
+/* ===== Floating contact buttons ===== */
+.float-stack{position:fixed;right:22px;bottom:22px;z-index:60;display:flex;flex-direction:column;gap:12px}
+.wa-float,.call-float{width:58px;height:58px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.35);transition:transform .2s,box-shadow .2s}
+.wa-float{background:#25D366}
+.wa-float svg{width:30px;height:30px}
+.wa-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(37,211,102,.45)}
+.call-float{background:var(--accent);color:#06243a}
+.call-float svg{width:28px;height:28px}
+.call-float:hover{transform:scale(1.08);box-shadow:0 8px 26px rgba(34,195,230,.45)}
+@media(max-width:760px){.float-stack{right:16px;bottom:16px;gap:10px}.wa-float,.call-float{width:52px;height:52px}.wa-float svg{width:27px;height:27px}.call-float svg{width:25px;height:25px}}
+
+/* ===== Stat band ===== */
+.statband{padding:64px 0;background:linear-gradient(120deg,#0c2438,#0a1a2b 60%,#0c2438);border-top:1px solid var(--accent-dim);border-bottom:1px solid var(--accent-dim);position:relative;overflow:hidden}
+.statband::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 200px at 50% 0%,rgba(34,195,230,.12),transparent 70%)}
+.statband-grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+.bigstat strong{display:block;font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;background:linear-gradient(180deg,#eafaff,#22c3e6);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.bigstat span{display:block;margin-top:10px;font-family:'JetBrains Mono',monospace;font-size:.78rem;letter-spacing:1px;color:var(--muted);text-transform:uppercase;line-height:1.5}
+@media(max-width:680px){.statband-grid{grid-template-columns:1fr 1fr;gap:34px 20px}}
+
+/* ===== Responsive ===== */
+@media(max-width:760px){
+  nav.links,.nav-cta{display:none}
+  .menu-btn{display:block}
+  .services,.why-grid,.contact-grid{grid-template-columns:1fr}
+  .hero-inner{grid-template-columns:1fr;gap:8px}
+  .hero-art{display:none}
+  .steps{grid-template-columns:1fr 1fr}
+  .about-grid{grid-template-columns:1fr;gap:32px}
+  .gallery-grid{grid-template-columns:1fr 1fr}
+  .hero{padding:72px 0 64px}
+  section{padding:60px 0}
+}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#top" class="logo"><img src="logo.png" alt="Module Tech UK"></a>
+    <nav class="links">
+      <a href="#services">Services</a>
+      <a href="#process">Process</a>
+      <a href="#areas">Areas</a>
+      <a href="#about">About</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta">Get a quote</a>
+    <button class="menu-btn" onclick="document.querySelector('.links').style.display='flex';this.remove()">Menu</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <div class="eyebrow">// Vehicle module specialists · United Kingdom</div>
+        <h1>Remapped. Repaired. <em>Recovered.</em></h1>
+        <p>Precision ECU remapping and module work for cars, vans, trucks, agricultural and plant machinery. We repair, recover and clone the electronics that keep you moving.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Request a quote →</a>
+          <a href="#services" class="btn btn-ghost">What we do</a>
+        </div>
+        <div class="price-badge"><span class="dot"></span>Remaps from <strong>£200</strong></div>
+        <div class="status-line"><span class="blip"></span>Mobile service across Herts · modules by post UK-wide</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 360 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="chipg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1c4a6e"/>
+              <stop offset="1" stop-color="#0f2438"/>
+            </linearGradient>
+            <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#22c3e6" stop-opacity=".35"/>
+              <stop offset="1" stop-color="#22c3e6" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <circle cx="180" cy="180" r="150" fill="url(#glow)"/>
+          <!-- traces -->
+          <g stroke="#22c3e6" stroke-width="2" fill="none" opacity=".55">
+            <path d="M30 90 H110 V140"/>
+            <path d="M30 150 H80"/>
+            <path d="M330 110 H250 V160"/>
+            <path d="M330 200 H280 V250"/>
+            <path d="M60 300 V240 H120"/>
+            <path d="M300 300 V250"/>
+          </g>
+          <g fill="#22c3e6">
+            <circle cx="30" cy="90" r="4"/><circle cx="30" cy="150" r="4"/>
+            <circle cx="330" cy="110" r="4"/><circle cx="330" cy="200" r="4"/>
+            <circle cx="60" cy="300" r="4"/><circle cx="300" cy="300" r="4"/>
+          </g>
+          <!-- chip body -->
+          <rect x="115" y="115" width="130" height="130" rx="14" fill="url(#chipg)" stroke="#2e6f96" stroke-width="2"/>
+          <rect x="138" y="138" width="84" height="84" rx="8" fill="none" stroke="#22c3e6" stroke-width="1.5" opacity=".7"/>
+          <text x="180" y="192" text-anchor="middle" font-family="'Chakra Petch',sans-serif" font-size="34" font-weight="700" fill="#cfe9f4">MT</text>
+          <!-- pins -->
+          <g fill="#3a7ea3">
+            <rect x="128" y="103" width="10" height="14" rx="2"/><rect x="150" y="103" width="10" height="14" rx="2"/><rect x="172" y="103" width="10" height="14" rx="2"/><rect x="194" y="103" width="10" height="14" rx="2"/><rect x="216" y="103" width="10" height="14" rx="2"/>
+            <rect x="128" y="243" width="10" height="14" rx="2"/><rect x="150" y="243" width="10" height="14" rx="2"/><rect x="172" y="243" width="10" height="14" rx="2"/><rect x="194" y="243" width="10" height="14" rx="2"/><rect x="216" y="243" width="10" height="14" rx="2"/>
+            <rect x="103" y="128" width="14" height="10" rx="2"/><rect x="103" y="150" width="14" height="10" rx="2"/><rect x="103" y="172" width="14" height="10" rx="2"/><rect x="103" y="194" width="14" height="10" rx="2"/><rect x="103" y="216" width="14" height="10" rx="2"/>
+            <rect x="243" y="128" width="14" height="10" rx="2"/><rect x="243" y="150" width="14" height="10" rx="2"/><rect x="243" y="172" width="14" height="10" rx="2"/><rect x="243" y="194" width="14" height="10" rx="2"/><rect x="243" y="216" width="14" height="10" rx="2"/>
+          </g>
+          <!-- pulse dots -->
+          <circle class="pulse p1" cx="110" cy="140" r="4" fill="#22c3e6"/>
+          <circle class="pulse p2" cx="250" cy="160" r="4" fill="#22c3e6"/>
+          <circle class="pulse p3" cx="120" cy="240" r="4" fill="#22c3e6"/>
+          <!-- scanning line over chip -->
+          <clipPath id="chipclip"><rect x="115" y="115" width="130" height="130" rx="14"/></clipPath>
+          <g clip-path="url(#chipclip)">
+            <rect class="scanline" x="115" y="115" width="130" height="3" fill="#3df0ff" opacity=".9"/>
+          </g>
+          <!-- rotating diagnostic ring -->
+          <circle class="diag-ring" cx="180" cy="180" r="165" fill="none" stroke="#22c3e6" stroke-width="1" stroke-dasharray="6 14" opacity=".4"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="vehicle-strip">
+    <div class="wrap">
+      <span>Cars</span><span>Vans</span><span>Trucks</span><span>Agricultural</span><span>Plant &amp; machinery</span>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Capabilities</div>
+        <h2>What we do</h2>
+      </div>
+      <div class="services">
+        <button class="card" data-modal="remapping" type="button">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l2-7 4 14 2-7h6"/></svg><span class="idx">01</span></div>
+          <h3>Remapping</h3>
+          <p>Custom ECU tuning for performance, economy or drivability — calibrated to your vehicle, not a generic file.</p>
+          <span class="card-more">Learn more →</span>
+        </button>
+        <button class="card" data-modal="repair" type="button">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.2-.3-.3-2.2z"/></svg><span class="idx">02</span></div>
+          <h3>Module Repair</h3>
+          <p>Diagnosis and component-level repair of faulty ECUs and control modules, restored to full working order.</p>
+          <span class="card-more">Learn more →</span>
+        </button>
+        <button class="card" data-modal="recovery" type="button">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v5h-5"/></svg><span class="idx">03</span></div>
+          <h3>Recovery</h3>
+          <p>Data recovery from damaged or corrupted modules — rescuing the information needed to get a unit running again.</p>
+          <span class="card-more">Learn more →</span>
+        </button>
+        <button class="card" data-modal="cloning" type="button">
+          <div class="card-top"><svg class="svc-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></svg><span class="idx">04</span></div>
+          <h3>Cloning</h3>
+          <p>Module cloning to transfer your existing data onto a replacement unit, avoiding costly dealer reprogramming.</p>
+          <span class="card-more">Learn more →</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="statband">
+    <div class="wrap statband-grid">
+      <div class="bigstat"><strong data-count="5">5</strong><span>vehicle sectors<br>covered</span></div>
+      <div class="bigstat"><strong data-count="4">4</strong><span>core module<br>services</span></div>
+      <div class="bigstat"><strong>£200</strong><span>remaps<br>from</span></div>
+      <div class="bigstat"><strong>UK</strong><span>wide service<br>by post</span></div>
+    </div>
+  </section>
+
+  <section id="why" class="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Why Module Tech UK</div>
+        <h2>Built around the electronics</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-item">
+          <div class="ico">[ precision ]</div>
+          <h4>Component-level work</h4>
+          <p>We work down to the board, not just the plug-in tools — so faults get fixed properly.</p>
+        </div>
+        <div class="why-item">
+          <div class="ico">[ honest ]</div>
+          <h4>Clear pricing</h4>
+          <p>You'll know the cost and the plan before any work begins. No surprises.</p>
+        </div>
+        <div class="why-item">
+          <div class="ico">[ uk-wide ]</div>
+          <h4>Cars & commercials</h4>
+          <p>Remapping and module services for a wide range of vehicles across the UK.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// How it works</div>
+        <h2>A simple process</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-no">01</div>
+          <h4>Get in touch</h4>
+          <p>Tell us your vehicle, the module and the fault or the work you want. We'll give you a price and a plan.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">02</div>
+          <h4>Send or book in</h4>
+          <p>Post the module to us, or arrange the work directly. We confirm what's needed before anything starts.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">03</div>
+          <h4>We do the work</h4>
+          <p>Remap, repair, recover or clone — carried out precisely and tested before it goes back to you.</p>
+        </div>
+        <div class="step">
+          <div class="step-no">04</div>
+          <h4>Back on the road</h4>
+          <p>Your module returns ready to fit and run, with support if you have any questions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <div class="sec-head">
+          <div class="tag">// About us</div>
+          <h2>Module Tech UK</h2>
+        </div>
+        <p>Module Tech was founded on a simple combination that's rare in this trade: deep expertise in computing and circuit boards, paired with real hands-on garage experience. That means we don't just plug in a tool and hope — we understand the electronics at component level and the vehicles they sit in.</p>
+        <p>From performance remapping to board-level repair, module recovery and cloning, we work across cars, vans, trucks, agricultural and plant machinery. Whether it's a faulty ECU, a corrupted module or a remap for more performance and economy, the work is done with genuine technical know-how.</p>
+        <p class="muted-p">Our focus is straightforward: precise work, honest pricing and getting your vehicle running as it should — without the cost and delay of main-dealer replacement.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><strong>5</strong><span>vehicle sectors covered</span></div>
+        <div class="stat"><strong>4</strong><span>core services</span></div>
+        <div class="stat"><strong>UK</strong><span>nationwide by post</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="areas" class="areas">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Where we work</div>
+        <h2>Areas we cover</h2>
+      </div>
+      <div class="areas-grid">
+        <div class="area-card">
+          <div class="area-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-5.7-7-11a7 7 0 0 1 14 0c0 5.3-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div>
+          <h4>Mobile service</h4>
+          <p>We come to you across Watford, Hertfordshire and the surrounding areas — including Luton, Hitchin, Bishop's Stortford, Harlow and Enfield.</p>
+          <div class="area-tags"><span>Watford</span><span>St Albans</span><span>Hemel Hempstead</span><span>Luton</span><span>Hitchin</span><span>Harlow</span><span>Enfield</span><span>+ surrounding</span></div>
+        </div>
+        <div class="area-card">
+          <div class="area-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="13" rx="2"/><path d="M2 11h20M7 7V4h10v3"/></svg></div>
+          <h4>By post — UK-wide</h4>
+          <p>Anywhere in the UK, you can remove and post your module to us for repair, recovery or cloning. We test it, sort it, and send it back ready to fit.</p>
+          <div class="area-tags"><span>Repair</span><span>Recovery</span><span>Cloning</span><span>Nationwide</span></div>
+        </div>
+      </div>
+      <div class="town-links">
+        <span>Popular areas:</span>
+        <a href="remapping-watford.html">Remapping Watford</a>
+        <a href="remapping-st-albans.html">St Albans</a>
+        <a href="remapping-hemel-hempstead.html">Hemel Hempstead</a>
+        <a href="remapping-luton.html">Luton</a>
+      </div>
+      <p class="areas-note">Not sure if you're in range for mobile work? <a href="#contact">Drop us a message</a> and we'll let you know.</p>
+    </div>
+  </section>
+
+  <!-- GALLERY HIDDEN until real photos available — uncomment to restore
+  <section id="gallery">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Our work</div>
+        <h2>Recent jobs</h2>
+      </div>
+      <div class="gallery-grid">
+        <div class="shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo coming soon</span></div>
+        <div class="shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo coming soon</span></div>
+        <div class="shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo coming soon</span></div>
+        <div class="shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo coming soon</span></div>
+        <div class="shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo coming soon</span></div>
+        <div class="shot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg><span>Photo coming soon</span></div>
+      </div>
+      <p class="gallery-note">Photos of completed work will appear here as jobs come in.</p>
+    </div>
+  </section>
+  -->
+
+  <section id="faq" class="why">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="tag">// Questions</div>
+        <h2>Frequently asked</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>What vehicles do you work on?</summary>
+          <p>Cars, vans, trucks, agricultural machinery and plant. If you're unsure whether yours is covered, get in touch and ask.</p>
+        </details>
+        <details>
+          <summary>Do I have to bring the vehicle to you?</summary>
+          <p>In many cases you can remove and post the module to us. For some work the vehicle may need to be present — we'll tell you which applies when you enquire.</p>
+        </details>
+        <details>
+          <summary>What's the difference between repair, recovery and cloning?</summary>
+          <p>Repair fixes a faulty module. Recovery rescues data from a damaged or corrupted unit. Cloning copies your existing data onto a replacement module, avoiding dealer reprogramming.</p>
+        </details>
+        <details>
+          <summary>How much does it cost?</summary>
+          <p>It depends on the vehicle, module and work involved. Send us the details and we'll give you a clear price before anything starts.</p>
+        </details>
+        <details>
+          <summary>Is remapping safe for my vehicle?</summary>
+          <p>Our remaps are calibrated to your specific vehicle rather than generic files, with drivability and reliability in mind. We're happy to talk through what's appropriate for yours.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy">
+        <h2>Get a quote</h2>
+        <p>Tell us your vehicle, the module and the fault — we'll come back with a price and a plan.</p>
+        <div class="contact-detail">
+          <span>email</span><br>info@moduletech.co.uk<br><br>
+          <span>phone</span><br><a href="tel:+447534000847" style="color:var(--accent)">07534 000847</a><br><br>
+          <span>area</span><br>United Kingdom
+        </div>
+      </div>
+      <form id="enquiry-form" action="https://formspree.io/f/xlgynkbk" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from Module Tech UK website">
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone">
+          </div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="reg">Vehicle reg</label>
+            <input type="text" id="reg" name="reg" placeholder="e.g. LT68 BWM">
+          </div>
+          <div class="field">
+            <label for="makemodel">Make &amp; model</label>
+            <input type="text" id="makemodel" name="make_model" placeholder="e.g. BMW 320d">
+          </div>
+        </div>
+        <div class="field">
+          <label for="service">Service needed</label>
+          <select id="service" name="service">
+            <option value="" disabled selected>Select a service…</option>
+            <option>Remapping</option>
+            <option>DPF / EGR / Adblue</option>
+            <option>Module repair</option>
+            <option>ECU cloning</option>
+            <option>Module recovery</option>
+            <option>Not sure / other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Details</label>
+          <textarea id="message" name="message" placeholder="Tell us about the fault or work you need" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send enquiry →</button>
+        <p id="form-status"></p>
+        <p class="form-note">By sending a unit to us you accept our <a href="terms.html">terms &amp; conditions</a>.</p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <a href="#top" class="logo"><img src="logo.png" alt="Module Tech UK"></a>
+    <div class="foot-mid">
+      © <span id="yr"></span> Module Tech UK · Remapping · Repair · Recovery · Cloning
+      <span class="foot-legal"><a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/profile.php?id=61589894204266" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12c0-6.6-5.4-12-12-12S0 5.4 0 12c0 6 4.4 11 10.1 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-1.9.9-1.9 1.8V12h3.3l-.5 3.5h-2.8v8.4C19.6 23 24 18 24 12z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/moduletechuk" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.6c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 2.7a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11zm0 9.1a3.6 3.6 0 1 1 0-7.2 3.6 3.6 0 0 1 0 7.2zm5.7-9.3a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0z"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- Service detail modals -->
+<div class="modal-overlay" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script type="application/json" id="service-content">
+{
+  "remapping": {
+    "title": "ECU Remapping",
+    "intro": "Remapping rewrites the software map inside your vehicle's ECU to change how the engine performs. Done properly, it unlocks the potential the manufacturer left on the table — for more power, better economy, or smoother drivability.",
+    "points": [
+      ["Tuned to your vehicle", "Every map is calibrated to your exact make, model and engine — never a generic off-the-shelf file flashed blindly onto your ECU."],
+      ["Performance or economy", "Whether you want sharper throttle response and more power, or improved MPG on a daily driver or fleet, the map is built around your goal."],
+      ["Cars, vans, trucks & more", "We remap passenger cars, commercial vans, trucks, agricultural machinery and plant — each with the right approach for the job."],
+      ["Reliability first", "Gains are set within safe limits for your engine, prioritising long-term reliability over headline numbers."]
+    ],
+    "footer": "Not sure what's possible for your vehicle? Send us the details and we'll talk you through realistic gains."
+  },
+  "repair": {
+    "title": "Module Repair",
+    "intro": "When an ECU or control module fails, the dealer answer is usually a costly replacement and reprogramming. We diagnose and repair the fault at component level instead — fixing the actual problem on the board.",
+    "points": [
+      ["Component-level work", "We work down to the circuit board — tracing faults to specific components and replacing them, rather than just swapping the whole unit."],
+      ["Common faults covered", "Failed ECUs, BSI units, instrument clusters and other control modules suffering from water damage, corrosion, failed components or communication faults."],
+      ["A fraction of dealer cost", "Repairing your existing unit avoids the price of a new module plus dealer coding, and keeps your original part."],
+      ["Tested before return", "Every repaired module is tested to confirm it's fully working before it goes back to you ready to fit."]
+    ],
+    "footer": "Describe the fault and your vehicle, and we'll tell you whether a repair is the right route."
+  },
+  "recovery": {
+    "title": "Module Recovery",
+    "intro": "Sometimes a module isn't just faulty — its data is damaged or corrupted, which can leave the unit unusable. Recovery rescues that critical information so the module can run again.",
+    "points": [
+      ["Data rescue", "We recover the software and stored data from modules that have become corrupted through failed updates, power faults or hardware damage."],
+      ["Avoid a full replacement", "Recovering the original data can save a module that would otherwise be scrap, avoiding a costly new unit and reprogramming."],
+      ["Pre-repair diagnosis", "Recovery often goes hand-in-hand with repair — we assess what's salvageable and the best way to get you running again."],
+      ["Honest assessment", "If a unit genuinely can't be recovered, we'll tell you straight and talk through the alternatives."]
+    ],
+    "footer": "Got a module that's stopped responding or won't accept programming? Get in touch and we'll take a look."
+  },
+  "cloning": {
+    "title": "ECU Cloning",
+    "intro": "Cloning copies all the data from your original ECU or module onto a replacement unit. The replacement then behaves exactly like your original — no dealer reprogramming or fresh coding required.",
+    "points": [
+      ["Plug-and-play replacement", "We transfer your existing data onto a donor unit so it works straight away in your vehicle, as if it were the original."],
+      ["Skip dealer reprogramming", "Cloning avoids the cost and hassle of main-dealer coding, immobiliser matching and security syncing on a brand-new module."],
+      ["Ideal for failed hardware", "When a module's hardware has failed but its data is intact, cloning onto a working unit is often the quickest, cheapest fix."],
+      ["Keyless to your vehicle", "The cloned unit retains your original immobiliser and security data, so your existing keys keep working."]
+    ],
+    "footer": "Replacing a failed module? Ask us whether cloning is the right approach for your vehicle."
+  }
+}
+</script>
+
+<div class="float-stack">
+  <a href="tel:+447534000847" class="call-float" aria-label="Call us">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .7-.2 1l-2.3 2.2z"/></svg>
+  </a>
+  <a href="https://wa.me/447534000847" class="wa-float" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+      <path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.8 5.5 2.2 7.9L.5 31.5l7.8-2.1c2.3 1.3 4.9 1.9 7.7 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28.3c-2.5 0-4.9-.7-7-1.9l-.5-.3-4.6 1.2 1.2-4.5-.3-.5c-1.4-2.2-2.1-4.7-2.1-7.3C2.6 8.6 8.6 2.6 16 2.6S29.4 8.6 29.4 16 23.4 28.8 16 28.8zm7.6-9.6c-.4-.2-2.5-1.2-2.8-1.4-.4-.1-.7-.2-.9.2-.3.4-1.1 1.4-1.3 1.6-.2.2-.5.3-.9.1-.4-.2-1.8-.6-3.4-2.1-1.2-1.1-2.1-2.5-2.3-2.9-.2-.4 0-.6.2-.8.2-.2.4-.5.6-.7.2-.2.3-.4.4-.7.1-.3.1-.5 0-.7-.1-.2-.9-2.2-1.3-3-.3-.8-.7-.7-.9-.7h-.8c-.3 0-.7.1-1 .5-.4.4-1.4 1.3-1.4 3.2s1.4 3.7 1.6 4c.2.3 2.8 4.3 6.8 6 .9.4 1.7.7 2.3.9.9.3 1.8.3 2.5.2.8-.1 2.5-1 2.8-2 .3-1 .3-1.8.2-2-.1-.2-.4-.3-.8-.5z"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+// Scroll reveal
+const revealEls=document.querySelectorAll('.sec-head, .card, .step, .stat, .shot, .faq details, .about-grid > div, .price-badge, .area-card');
+revealEls.forEach(el=>el.classList.add('reveal'));
+if('IntersectionObserver' in window){
+  const io=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.12});
+  revealEls.forEach(el=>io.observe(el));
+}else{
+  revealEls.forEach(el=>el.classList.add('in'));
+}
+
+// Service modals
+const svcData=JSON.parse(document.getElementById('service-content').textContent);
+const overlay=document.getElementById('modal');
+const mbody=document.getElementById('modal-body');
+const mclose=document.getElementById('modal-close');
+let lastFocused=null;
+
+function openModal(key){
+  const d=svcData[key]; if(!d) return;
+  let html='<div class="m-tag">// Service</div><h3 id="modal-title">'+d.title+'</h3>';
+  html+='<p class="m-intro">'+d.intro+'</p>';
+  d.points.forEach(p=>{ html+='<div class="m-point"><h4>'+p[0]+'</h4><p>'+p[1]+'</p></div>'; });
+  html+='<div class="m-footer">'+d.footer+'</div>';
+  html+='<a href="#contact" class="btn btn-primary m-cta" data-close>Request a quote →</a>';
+  mbody.innerHTML=html;
+  lastFocused=document.activeElement;
+  overlay.hidden=false;
+  document.body.style.overflow='hidden';
+  mclose.focus();
+}
+function closeModal(){
+  overlay.hidden=true;
+  document.body.style.overflow='';
+  if(lastFocused) lastFocused.focus();
+}
+document.querySelectorAll('.card[data-modal]').forEach(c=>{
+  c.addEventListener('click',()=>openModal(c.getAttribute('data-modal')));
+});
+mclose.addEventListener('click',closeModal);
+overlay.addEventListener('click',e=>{ if(e.target===overlay||e.target.hasAttribute('data-close')) closeModal(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!overlay.hidden) closeModal(); });
+
+const form=document.getElementById('enquiry-form');
+const status=document.getElementById('form-status');
+form.addEventListener('submit',async function(e){
+  e.preventDefault();
+  status.style.color='var(--muted)';
+  status.textContent='Sending…';
+  try{
+    const res=await fetch(form.action,{
+      method:'POST',
+      body:new FormData(form),
+      headers:{'Accept':'application/json'}
+    });
+    if(res.ok){
+      form.reset();
+      status.style.color='var(--accent)';
+      status.textContent='Thanks — your enquiry has been sent. We\u2019ll be in touch shortly.';
+    }else{
+      status.style.color='#ff6b6b';
+      status.textContent='Something went wrong. Please email info@moduletech.co.uk instead.';
+    }
+  }catch(err){
+    status.style.color='#ff6b6b';
+    status.textContent='Something went wrong. Please email info@moduletech.co.uk instead.';
+  }
+});
+</script>
+</body>
+</html>
