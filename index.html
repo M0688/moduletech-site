@@ -185,10 +185,17 @@ form{background:var(--panel);border:1px solid var(--line);border-radius:12px;pad
 @media(max-width:480px){.field-row{grid-template-columns:1fr}}
 form .btn-primary{width:100%;justify-content:center;border:none;cursor:pointer}
 #form-status{margin-top:14px;font-size:.9rem;text-align:center;min-height:1.2em}
+.form-note{font-size:.82rem;color:var(--muted);text-align:center;line-height:1.5}
+.form-note a{color:var(--accent);border-bottom:1px solid var(--accent-dim);transition:.2s}
+.form-note a:hover{border-color:var(--accent)}
 
 /* ===== Footer ===== */
 footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.85rem}
 .foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.foot-mid{text-align:center}
+.foot-legal{display:block;margin-top:6px}
+.foot-legal a{color:var(--muted);border-bottom:1px solid var(--line);transition:.2s}
+.foot-legal a:hover{color:var(--accent);border-color:var(--accent)}
 .socials{display:flex;gap:14px}
 .socials a{width:36px;height:36px;border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;justify-content:center;color:var(--muted);transition:.2s}
 .socials a svg{width:18px;height:18px}
@@ -682,6 +689,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
         </div>
         <button type="submit" class="btn btn-primary">Send enquiry →</button>
         <p id="form-status"></p>
+        <p class="form-note">By sending a unit to us you accept our <a href="terms.html">terms &amp; conditions</a>.</p>
       </form>
     </div>
   </section>
@@ -691,7 +699,10 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 <footer>
   <div class="wrap foot">
     <a href="#top" class="logo"><img src="logo.png" alt="Module Tech UK"></a>
-    <div class="foot-mid">© <span id="yr"></span> Module Tech UK · Remapping · Repair · Recovery · Cloning</div>
+    <div class="foot-mid">
+      © <span id="yr"></span> Module Tech UK · Remapping · Repair · Recovery · Cloning
+      <span class="foot-legal"><a href="terms.html">Terms &amp; Conditions</a></span>
+    </div>
     <div class="socials">
       <a href="https://www.facebook.com/profile.php?id=61589894204266" target="_blank" rel="noopener" aria-label="Facebook">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12c0-6.6-5.4-12-12-12S0 5.4 0 12c0 6 4.4 11 10.1 11.9v-8.4H7.1V12h3V9.4c0-3 1.8-4.6 4.5-4.6 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-1.9.9-1.9 1.8V12h3.3l-.5 3.5h-2.8v8.4C19.6 23 24 18 24 12z"/></svg>
