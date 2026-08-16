@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Terms &amp; Conditions | Module Tech UK</title>
-<meta name="description" content="Terms and conditions for all ECU and module work carried out by Module Tech — fees, payment, donor units, warranty seals, liability and data. Effective 10 August 2026.">
+<meta name="description" content="Terms and conditions for all ECU and module work carried out by Module Tech — fees, payment, donor units, warranty seals, liability and data.">
 <link rel="canonical" href="https://moduletech.co.uk/terms.html">
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -12,70 +12,19 @@
 <link rel="apple-touch-icon" sizes="180x180" href="favicon-180.png">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Terms &amp; Conditions | Module Tech UK">
-<meta property="og:description" content="Terms and conditions for all ECU and module work carried out by Module Tech. Effective 10 August 2026.">
+<meta property="og:description" content="Terms and conditions for all ECU and module work carried out by Module Tech.">
 <meta property="og:url" content="https://moduletech.co.uk/terms.html">
-<meta property="og:image" content="https://moduletech.co.uk/logo.png">
+<meta property="og:image" content="https://moduletech.co.uk/logo-social.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Module Tech UK">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:locale" content="en_GB">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 <style>
-:root{
-  --bg:#0a1420;
-  --bg2:#070f18;
-  --panel:#0f1c2c;
-  --panel2:#102536;
-  --line:#1c2e42;
-  --ink:#e8eef6;
-  --muted:#8597ad;
-  --accent:#22c3e6;
-  --accent2:#3df0ff;
-  --accent-dim:#14627a;
-  --grid:#11212f;
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  background:var(--bg);
-  color:var(--ink);
-  font-family:'Inter',system-ui,sans-serif;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-a{color:inherit;text-decoration:none}
-
-/* ===== Header ===== */
-header{
-  position:sticky;top:0;z-index:50;
-  background:rgba(10,14,20,.82);
-  backdrop-filter:blur(10px);
-  border-bottom:1px solid var(--line);
-}
-.bar{display:flex;align-items:center;justify-content:space-between;height:72px}
-.logo{display:flex;align-items:center}
-.logo img{height:54px;width:auto}
-nav.links{display:flex;gap:28px;font-size:.9rem;color:var(--muted)}
-nav.links a:hover{color:var(--accent)}
-.nav-cta{
-  font-family:'Chakra Petch',sans-serif;font-size:.82rem;font-weight:600;letter-spacing:.5px;
-  border:1px solid var(--accent-dim);color:var(--accent);
-  padding:8px 16px;border-radius:6px;transition:.2s;
-}
-.nav-cta:hover{background:var(--accent);color:#06243a}
-.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);padding:8px 12px;border-radius:6px;font-size:.85rem}
-
-/* ===== Buttons ===== */
-.btn{
-  font-family:'Chakra Petch',sans-serif;font-weight:600;letter-spacing:.5px;font-size:.92rem;
-  padding:13px 26px;border-radius:7px;transition:.2s;display:inline-flex;align-items:center;gap:9px;
-}
-.btn-primary{background:var(--accent);color:#06243a}
-.btn-primary:hover{box-shadow:0 0 0 3px rgba(34,195,230,.25);transform:translateY(-1px)}
-.btn-ghost{border:1px solid var(--line);color:var(--ink)}
-.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
-
 /* ===== Terms hero ===== */
 .terms-hero{
   padding:72px 0 56px;border-bottom:1px solid var(--line);
@@ -198,8 +147,6 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   .toc a:hover{border-color:var(--accent)}
 }
 @media(max-width:760px){
-  nav.links,.nav-cta{display:none}
-  .menu-btn{display:block}
   .terms-hero{padding:56px 0 44px}
   .terms-main{padding:48px 0 64px}
 }
@@ -246,17 +193,16 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 
 <header>
   <div class="wrap bar">
-    <a href="index.html" class="logo"><img src="logo.png" alt="Module Tech UK"></a>
-    <nav class="links">
-      <a href="index.html#services">Services</a>
-      <a href="index.html#process">Process</a>
+    <a href="index.html" class="logo"><img src="logo-header.png" alt="Module Tech UK"></a>
+    <nav class="links" id="site-nav">
+      <a href="remapping.html">Remapping</a>
+      <a href="module-repair.html">Module Repair</a>
       <a href="index.html#areas">Areas</a>
       <a href="index.html#about">About</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="terms.html">Terms</a>
     </nav>
     <a href="index.html#contact" class="nav-cta">Get a quote</a>
-    <button class="menu-btn" onclick="document.querySelector('.links').style.display='flex';this.remove()">Menu</button>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
   </div>
 </header>
 
@@ -268,8 +214,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
       <h1>Terms and Conditions</h1>
       <p class="lede">These terms apply to all work carried out by Module Tech. By sending a unit to us you accept them in full.</p>
       <div class="meta-row">
-        <span class="meta-pill"><span class="dot"></span>Effective <strong>10 August 2026</strong></span>
-        <span class="meta-pill">Module Tech · 262d Boundary Way · Watford · WD25 7SX</span>
+        <span class="meta-pill"><span class="dot"></span>Module Tech · 262d Boundary Way · Watford · WD25 7SX</span>
       </div>
     </div>
   </section>
@@ -361,6 +306,12 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
           <p>Where work requires a donor unit, you are responsible for sourcing and supplying it unless we have agreed otherwise in writing.</p>
           <p>Donor units are purchased at your own risk. We are unable to verify the condition of a donor before work begins and accept no liability for donors that arrive faulty, damaged, incorrectly specified or otherwise unsuitable. Where a donor proves unusable our charges remain payable in full and a replacement donor will be required at your cost.</p>
           <p>Donors must match the original unit exactly on part number, and where possible on build date. Manufacturers revise these units during production and a superficially similar unit of a different revision may not be compatible.</p>
+          <h3>Identifying the units</h3>
+          <p>Where two or more units are supplied, you must clearly mark which unit is the original and which is the donor. A durable label or marking on each unit is sufficient.</p>
+          <div class="keypoint">
+            <p>We accept no liability for work carried out on the wrong unit where the units were not clearly identified.</p>
+          </div>
+          <p>Where units arrive unmarked or the marking is ambiguous, we will hold the job and contact you for clarification before proceeding. Any delay arising from this is not our responsibility.</p>
         </section>
 
         <section class="clause" id="clause-6">
@@ -442,7 +393,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 
 <footer>
   <div class="wrap foot">
-    <a href="index.html" class="logo"><img src="logo.png" alt="Module Tech UK"></a>
+    <a href="index.html" class="logo"><img src="logo-header.png" alt="Module Tech UK"></a>
     <div class="foot-mid">
       © <span id="yr"></span> Module Tech UK · Remapping · Repair · Recovery · Cloning
       <span class="foot-legal"><a href="terms.html">Terms &amp; Conditions</a></span>
@@ -469,6 +420,6 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
   </a>
 </div>
 
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+<script src="site.js" defer></script>
 </body>
 </html>
