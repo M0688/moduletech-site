@@ -368,3 +368,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 .keynote.warn{border-color:#8a6d2f;border-left-color:#e0b341;background:linear-gradient(180deg,rgba(224,179,65,.06),var(--panel))}
 .keynote.warn strong{color:#f0cd72}
 .keynote em{color:var(--ink);font-style:normal;font-weight:600}
+
+/* Secondary hero door — equal visual weight to btn-primary */
+.btn-accent{border:1px solid var(--accent);color:var(--accent);background:rgba(34,195,230,.09)}
+.btn-accent:hover{background:var(--accent);color:#06243a;transform:translateY(-1px)}
