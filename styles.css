@@ -372,3 +372,15 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 /* Secondary hero door — equal visual weight to btn-primary */
 .btn-accent{border:1px solid var(--accent);color:var(--accent);background:rgba(34,195,230,.09)}
 .btn-accent:hover{background:var(--accent);color:#06243a;transform:translateY(-1px)}
+
+/* Why grid flows to 4 items */
+.why-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:34px}
+
+/* Warranty badge */
+.warranty-badge{
+  display:inline-flex;align-items:center;gap:9px;margin-top:16px;padding:9px 16px;
+  border:1px solid var(--accent-dim);border-radius:30px;background:rgba(34,195,230,.08);
+  font-family:'JetBrains Mono',monospace;font-size:.84rem;color:var(--muted);letter-spacing:.5px;
+}
+.warranty-badge strong{color:var(--accent);font-weight:600}
+.warranty-badge svg{width:16px;height:16px;color:var(--accent);flex:none}
