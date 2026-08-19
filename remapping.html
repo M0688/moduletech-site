@@ -99,15 +99,15 @@
         <h2>Sound like you?</h2>
       </div>
       <div class="who-grid">
-        <img src="who-enthusiast.jpg" alt="Car enthusiasts — want more power and a sharper drive from a car you already know and love" loading="lazy">
-        <img src="who-trade.jpg" alt="Trade and van drivers — DPF, EGR and AdBlue solutions to keep the van on the road" loading="lazy">
-        <img src="who-towing.jpg" alt="Caravan and trailer towing — more low-down torque to take the strain out of towing" loading="lazy">
-        <img src="who-motorhome.jpg" alt="Motorhome owners — extra pull for the weight you're carrying" loading="lazy">
-        <img src="who-diesel.jpg" alt="High-mileage diesel owners — sort out recurring DPF, EGR or AdBlue faults properly" loading="lazy">
-        <img src="who-fleet.jpg" alt="Fleet and van operators — economy-focused remaps to bring fuel costs down" loading="lazy">
-        <img src="who-4x4.jpg" alt="4x4 and off-road drivers — stronger low-end torque for green-laning" loading="lazy">
-        <img src="who-taxi.jpg" alt="Taxi and private hire — high-mileage economy tuning" loading="lazy">
-        <img src="who-daily.jpg" alt="Everyday drivers — a mild, sensible remap for a more responsive daily drive" loading="lazy">
+        <button type="button" class="who-thumb"><img src="who-enthusiast.jpg" alt="Car enthusiasts — want more power and a sharper drive from a car you already know and love" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-trade.jpg" alt="Trade and van drivers — DPF, EGR and AdBlue solutions to keep the van on the road" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-towing.jpg" alt="Caravan and trailer towing — more low-down torque to take the strain out of towing" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-motorhome.jpg" alt="Motorhome owners — extra pull for the weight you're carrying" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-diesel.jpg" alt="High-mileage diesel owners — sort out recurring DPF, EGR or AdBlue faults properly" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-fleet.jpg" alt="Fleet and van operators — economy-focused remaps to bring fuel costs down" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-4x4.jpg" alt="4x4 and off-road drivers — stronger low-end torque for green-laning" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-taxi.jpg" alt="Taxi and private hire — high-mileage economy tuning" loading="lazy"></button>
+        <button type="button" class="who-thumb"><img src="who-daily.jpg" alt="Everyday drivers — a mild, sensible remap for a more responsive daily drive" loading="lazy"></button>
       </div>
     </div>
   </section>
@@ -323,6 +323,11 @@
 
 </main>
 
+<div class="lightbox-overlay" id="lightbox" hidden>
+  <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
 <footer>
   <div class="wrap foot">
     <a href="index.html" class="logo"><img src="logo-header.png" alt="Module Tech UK"></a>
@@ -374,6 +379,32 @@ form.addEventListener('submit',async function(e){
     status.textContent='Something went wrong. Please email info@moduletech.co.uk instead.';
   }
 });
+
+// Image lightbox
+const lb=document.getElementById('lightbox');
+const lbImg=document.getElementById('lightbox-img');
+const lbClose=document.getElementById('lightbox-close');
+let lbLastFocused=null;
+document.querySelectorAll('.who-thumb').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const img=btn.querySelector('img');
+    lbImg.src=img.src;
+    lbImg.alt=img.alt;
+    lbLastFocused=document.activeElement;
+    lb.hidden=false;
+    document.body.style.overflow='hidden';
+    lbClose.focus();
+  });
+});
+function closeLightbox(){
+  lb.hidden=true;
+  lbImg.src='';
+  document.body.style.overflow='';
+  if(lbLastFocused) lbLastFocused.focus();
+}
+lbClose.addEventListener('click',closeLightbox);
+lb.addEventListener('click',e=>{ if(e.target===lb) closeLightbox(); });
+document.addEventListener('keydown',e=>{ if(e.key==='Escape'&&!lb.hidden) closeLightbox(); });
 </script>
 <script src="site.js?v=74079be0" defer></script>
 </body>
