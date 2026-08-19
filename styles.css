@@ -364,6 +364,7 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 .pricecard .p-amt{font-family:'Chakra Petch',sans-serif;font-weight:700;font-size:2rem;color:var(--accent);line-height:1}
 .pricecard .p-lab{font-family:'JetBrains Mono',monospace;font-size:.74rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-top:9px}
 .pricecard .p-note{color:var(--muted);font-size:.88rem;margin-top:10px}
+.pricecard .p-trade{margin-top:14px;display:inline-block;font-family:'JetBrains Mono',monospace;font-size:.72rem;letter-spacing:.5px;color:var(--accent2);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
 @media(max-width:680px){.pricerow{grid-template-columns:1fr}}
 
 /* ===== Trade band ===== */
