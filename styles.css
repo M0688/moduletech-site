@@ -331,6 +331,16 @@ footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-s
 .gate-card-accent{border-color:var(--accent-dim)}
 @media(max-width:760px){.gate-choices{grid-template-columns:1fr}.gate-hero{min-height:auto;padding:48px 0}}
 
+/* ===== Who it's for (image cards) ===== */
+.who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.who-grid img{
+  width:100%;height:auto;display:block;border-radius:14px;
+  border:1px solid var(--line);transition:.25s;
+}
+.who-grid img:hover{border-color:var(--accent-dim);transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.35)}
+@media(max-width:900px){.who-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.who-grid{grid-template-columns:1fr}}
+
 /* ===== Module list (trade) ===== */
 .modlist{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .modlist div{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px}
