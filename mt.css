@@ -1,8 +1,8 @@
 
 /* Layout: dark workshop page matching the MT logo; one column of bands, each with an inner gutter wrapper */
 :root{
-  --bg:#09161f; --bg2:#0e202c; --panel:#122938; --line:#1f3a4c;
-  --fg:#e6f0f5; --muted:#93aab8; --accent:#2ec4ea; --accent-ink:#04131b; --warn:#f2b84b;
+  --bg:#141617; --bg2:#1b1d1f; --panel:#222527; --line:#34383b;
+  --fg:#f1f2f3; --muted:#a6abaf; --accent:#e5323e; --accent-ink:#ffffff; --warn:#f2b84b;
   --display:"Chakra Petch",system-ui,sans-serif;
   --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
