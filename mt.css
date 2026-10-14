@@ -1,12 +1,12 @@
 
 /* Layout: dark workshop page matching the MT logo; one column of bands, each with an inner gutter wrapper */
 :root{
-  --bg:#141617; --bg2:#1b1d1f; --panel:#222527; --line:#34383b;
-  --fg:#f1f2f3; --muted:#a6abaf; --accent:#e5323e; --accent-ink:#ffffff; --warn:#f2b84b;
+  --bg:#f6f6f5; --bg2:#ececea; --panel:#ffffff; --line:#d9dbda;
+  --fg:#17191a; --muted:#585e62; --accent:#d22a35; --accent-ink:#ffffff; --warn:#9a5b00;
+  --dark:#16181a; --dark-fg:#f1f2f3; --dark-muted:#b0b5b9; --dark-line:#2e3235;
   --display:"Chakra Petch",system-ui,sans-serif;
   --body:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
   --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
-  color-scheme:dark;
 }
 body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
 *{box-sizing:border-box}
@@ -134,3 +134,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .prose ul{margin:0;padding-left:20px;display:grid;gap:6px}
 .socials{display:flex;gap:16px}
 .socials a{color:var(--muted)}
+
+/* light body, dark band for the logo */
+:root{color-scheme:light}
+header{background:color-mix(in srgb,var(--dark) 96%,transparent);border-bottom-color:var(--dark-line)}
+header .brand{color:var(--dark-fg)}
+header nav a{color:var(--dark-muted)}
+header nav a:hover{color:var(--dark-fg)}
+.hero,.page-hero{background:var(--dark);color:var(--dark-fg)}
+.hero .lede,.page-hero .lede,.hero .facts,.page-hero .facts{color:var(--dark-muted)}
+.hero .btn-ghost,.page-hero .btn-ghost{color:var(--dark-fg);border-color:var(--dark-line)}
+.goal,form,details{box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.rule{background:color-mix(in srgb,var(--warn) 6%,var(--panel))}
+input,select,textarea{background:var(--panel)}
